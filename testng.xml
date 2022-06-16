@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="CWA Windows Sample">
+    <test  name="Admin Tests">
+        <classes>
+            <class name="prelaunch.DownloadLatestCWABuild"/>
+            <class name="prelaunch.Install_AddStore_Login_Tests"/>
+            <class name="prelaunch.singleLaunch"/>
+            <class name="prelaunch.DeleteDownloadedCWABuild"/>
+        </classes>
+    </test>
+</suite>

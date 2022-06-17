@@ -4,7 +4,7 @@ import org.testng.annotations.AfterSuite;
 
 import java.io.File;
 
-public class DeleteDownloadedCWABuild {
+public class DeleteBuild {
 
     @AfterSuite
     void deleteCWABuild(){

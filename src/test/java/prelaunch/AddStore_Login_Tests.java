@@ -3,6 +3,7 @@ package prelaunch;
 import io.appium.java_client.windows.WindowsDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import utilities.PropertiesFile;
 
@@ -10,25 +11,11 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-public class Install_AddStore_Login_Tests extends PropertiesFile {
+public class AddStore_Login_Tests extends PropertiesFile {
 
     public static WindowsDriver driver;
 
-    @Test(priority = 0)
-    void installation() throws IOException, InterruptedException {
-
-        String CWAInstallCMD = System.getProperty("user.dir")+"\\Builds\\CitrixWorkspaceApp.exe /includeSSON /silent";
-        Runtime.getRuntime().exec(CWAInstallCMD);
-        do {
-            System.out.println("Installing the build....");
-            Thread.sleep(150000);
-            System.out.println("Installing the build....");
-        } while (false);
-        //while(!(new File("").exists()));
-        System.out.println("Installation passed");
-    }
-
-    @Test(priority = 1)
+    @BeforeClass
     void setUp() throws IOException {
         //Runtime.getRuntime().exec("Dependencies\\Windows Application Driver\\WinAppDriver.exe");
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -40,7 +27,7 @@ public class Install_AddStore_Login_Tests extends PropertiesFile {
     }
 
 
-    @Test(priority = 2, dependsOnMethods = {"setUp"})
+    @Test(priority = 1, dependsOnMethods = {"setUp"})
     void addStore() throws InterruptedException, IOException {
         Thread.sleep(2000);
         WebElement storeURL = driver.findElementByName("EmailOrServerTextField");
@@ -49,7 +36,7 @@ public class Install_AddStore_Login_Tests extends PropertiesFile {
         System.out.println("Store Added successfully");
     }
 
-    @Test(priority = 3, dependsOnMethods = {"addStore"})
+    @Test(priority = 2, dependsOnMethods = {"addStore"})
     void loginTest() throws InterruptedException, IOException {
         Thread.sleep(2000);
         WebElement userName = driver.findElementByAccessibilityId("username");

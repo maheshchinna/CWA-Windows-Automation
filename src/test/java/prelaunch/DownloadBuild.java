@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-public class DownloadLatestCWABuild extends PropertiesFile {
+public class DownloadBuild extends PropertiesFile {
 
     @BeforeSuite
     void downloadCWABuild() throws IOException, InterruptedException {

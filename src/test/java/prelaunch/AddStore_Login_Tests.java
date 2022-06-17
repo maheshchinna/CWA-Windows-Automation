@@ -7,6 +7,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import utilities.PropertiesFile;
 
+import java.awt.*;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -17,6 +19,10 @@ public class AddStore_Login_Tests extends PropertiesFile {
 
     @BeforeClass
     void setUp() throws IOException {
+        // Process process = new ProcessBuilder("").start();
+        Desktop desktop = Desktop.getDesktop();
+        String WinAppDrv = System.getProperty("user.dir")+"\\Dependencies\\Windows Application Driver\\WinAppDriver.exe";
+        desktop.open(new File(WinAppDrv));
         //Runtime.getRuntime().exec("Dependencies\\Windows Application Driver\\WinAppDriver.exe");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("app", "C:\\Program Files (x86)\\Citrix\\ICA Client\\SelfServicePlugin\\SelfService.exe");
@@ -27,7 +33,7 @@ public class AddStore_Login_Tests extends PropertiesFile {
     }
 
 
-    @Test(priority = 1, dependsOnMethods = {"setUp"})
+    @Test(priority = 0, dependsOnMethods = {"setUp"})
     void addStore() throws InterruptedException, IOException {
         Thread.sleep(2000);
         WebElement storeURL = driver.findElementByName("EmailOrServerTextField");
@@ -36,7 +42,7 @@ public class AddStore_Login_Tests extends PropertiesFile {
         System.out.println("Store Added successfully");
     }
 
-    @Test(priority = 2, dependsOnMethods = {"addStore"})
+    @Test(priority = 1, dependsOnMethods = {"addStore"})
     void loginTest() throws InterruptedException, IOException {
         Thread.sleep(2000);
         WebElement userName = driver.findElementByAccessibilityId("username");

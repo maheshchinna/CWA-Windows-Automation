@@ -12,6 +12,25 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.0.0-M6</version>
+                    <configuration>
+                        <suiteXmlFiles>
+                            <!-- suppress UnresolvedMavenProperty  -->
+                            <suiteXmlFile>testng.xml</suiteXmlFile>
+                        </suiteXmlFiles>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
     <dependencies>
         <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
         <dependency>
@@ -56,7 +75,5 @@
             <artifactId>autoit</artifactId>
             <version>0.2.44</version>
         </dependency>
-
-
     </dependencies>
 </project>

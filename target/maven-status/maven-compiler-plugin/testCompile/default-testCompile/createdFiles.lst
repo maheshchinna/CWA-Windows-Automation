@@ -1,0 +1,11 @@
+prelaunch\AddStore_Login_Tests.class
+prelaunch\Install_Test.class
+utilities\PropertiesFile.class
+prelaunch\Uninstall_Test.class
+prelaunch\LogOff_Tests.class
+UnitTest.class
+backup\InstallBuild.class
+prelaunch\DeleteBuild.class
+prelaunch\DownloadBuild.class
+prelaunch\SingleLaunch_Tests.class
+utilities\MyScreenRecorder.class

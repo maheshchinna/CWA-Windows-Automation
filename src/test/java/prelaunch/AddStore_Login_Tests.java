@@ -18,12 +18,13 @@ public class AddStore_Login_Tests extends PropertiesFile {
     public static WindowsDriver driver;
 
     @BeforeClass
-    void setUp() throws IOException {
+    void setUp() throws IOException, InterruptedException {
         // Process process = new ProcessBuilder("").start();
         Desktop desktop = Desktop.getDesktop();
         String WinAppDrv = System.getProperty("user.dir")+"\\Dependencies\\Windows Application Driver\\WinAppDriver.exe";
         desktop.open(new File(WinAppDrv));
         //Runtime.getRuntime().exec("Dependencies\\Windows Application Driver\\WinAppDriver.exe");
+        Thread.sleep(10000);
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("app", "C:\\Program Files (x86)\\Citrix\\ICA Client\\SelfServicePlugin\\SelfService.exe");
         capabilities.setCapability("platformName", "Windows 10");
@@ -32,8 +33,7 @@ public class AddStore_Login_Tests extends PropertiesFile {
         driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
     }
 
-
-    @Test(priority = 0, dependsOnMethods = {"setUp"})
+    @Test(priority = 0)
     void addStore() throws InterruptedException, IOException {
         Thread.sleep(2000);
         WebElement storeURL = driver.findElementByName("EmailOrServerTextField");

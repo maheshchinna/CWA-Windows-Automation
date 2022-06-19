@@ -1,0 +1,37 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 3, Errors: 0, Skipped: 1, Time elapsed: 630.579 s <<< FAILURE! - in TestSuite
+addStore(prelaunch.AddStore_Login_Tests)  Time elapsed: 64.56 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'WIN10EN-CT5UJHL', ip: '10.150.138.64', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: io.appium.java_client.windows.WindowsDriver
+Capabilities {app: C:\Program Files (x86)\Citr..., javascriptEnabled: true, platform: WIN10, platformName: Windows 10}
+Session ID: 0761FCDB-36F6-4FD6-AF6C-790408B5E057
+*** Element info: {Using=name, value=EmailOrServerTextField}
+	at prelaunch.AddStore_Login_Tests.addStore(AddStore_Login_Tests.java:39)
+
+launchDesktop(prelaunch.SingleLaunch_Tests)  Time elapsed: 41.461 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+Connection refused: no further information
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'WIN10EN-CT5UJHL', ip: '10.150.138.64', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: driver.version: WindowsDriver
+	at prelaunch.SingleLaunch_Tests.launchDesktop(SingleLaunch_Tests.java:17)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at prelaunch.SingleLaunch_Tests.launchDesktop(SingleLaunch_Tests.java:17)
+
+launchApp(prelaunch.SingleLaunch_Tests)  Time elapsed: 0.002 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+Connection refused: no further information
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'WIN10EN-CT5UJHL', ip: '10.150.138.64', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: driver.version: WindowsDriver
+	at prelaunch.SingleLaunch_Tests.launchApp(SingleLaunch_Tests.java:29)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at prelaunch.SingleLaunch_Tests.launchApp(SingleLaunch_Tests.java:29)
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [CWA Windows Sample]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="Admin Tests(failed)" verbose="0">
+    <classes>
+      <class name="prelaunch.SingleLaunch_Tests">
+        <methods>
+          <include name="launchDesktop"/>
+          <include name="launchApp"/>
+        </methods>
+      </class> <!-- prelaunch.SingleLaunch_Tests -->
+      <class name="prelaunch.AddStore_Login_Tests">
+        <methods>
+          <include name="loginTest"/>
+          <include name="addStore"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- prelaunch.AddStore_Login_Tests -->
+    </classes>
+  </test> <!-- Admin Tests(failed) -->
+</suite> <!-- Failed suite [CWA Windows Sample] -->

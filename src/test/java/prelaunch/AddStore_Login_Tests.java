@@ -1,12 +1,15 @@
 package prelaunch;
 
 import io.appium.java_client.windows.WindowsDriver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import utilities.PropertiesFile;
-
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
@@ -20,6 +23,7 @@ public class AddStore_Login_Tests extends PropertiesFile {
     @BeforeClass
     void setUp() throws IOException, InterruptedException {
         // Process process = new ProcessBuilder("").start();
+        Thread.sleep(5000);
         Desktop desktop = Desktop.getDesktop();
         String WinAppDrv = System.getProperty("user.dir")+"\\Dependencies\\Windows Application Driver\\WinAppDriver.exe";
         desktop.open(new File(WinAppDrv));
@@ -35,14 +39,23 @@ public class AddStore_Login_Tests extends PropertiesFile {
 
     @Test(priority = 0)
     void addStore() throws InterruptedException, IOException {
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
+        WebDriverWait driverWait =new WebDriverWait(driver, 10);
+       /* driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.name("EmailOrServerTextField")
+                ));*/
         WebElement storeURL = driver.findElementByName("EmailOrServerTextField");
         storeURL.sendKeys(read_properties("storeURL"));
         driver.findElementByName("Continue").click();
         System.out.println("Store Added successfully");
+       /* driverWait.until(
+                ExpectedConditions.visibilityOfElementLocated(
+                        By.name("username")
+                )
+        );*/
+
     }
 
-    @Test(priority = 1, dependsOnMethods = {"addStore"})
+    @Test(priority = 1, dependsOnMethods = {"addStore"},groups = "post_login")
     void loginTest() throws InterruptedException, IOException {
         Thread.sleep(2000);
         WebElement userName = driver.findElementByAccessibilityId("username");

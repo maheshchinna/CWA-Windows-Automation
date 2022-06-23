@@ -3,13 +3,13 @@ package prelaunch;
 import io.appium.java_client.windows.WindowsDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-
 import java.util.concurrent.TimeUnit;
 
 public class SingleLaunch_Tests {
 
     WindowsDriver local_driver;
-    @Test(priority = 0)
+
+    @Test(dependsOnGroups = "post_login")
     void launchDesktop() throws InterruptedException {
         local_driver = AddStore_Login_Tests.driver;
         local_driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
@@ -24,7 +24,7 @@ public class SingleLaunch_Tests {
         Thread.sleep(60000);
     }
 
-    @Test(priority = 1)
+    @Test(priority = 1, dependsOnGroups = "post_login")
     void launchApp() throws InterruptedException {
         local_driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
 

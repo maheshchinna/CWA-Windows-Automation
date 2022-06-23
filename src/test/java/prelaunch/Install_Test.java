@@ -12,7 +12,7 @@ public class Install_Test {
         Runtime.getRuntime().exec(CWAInstallCMD);
         do {
             System.out.println("Installing the build....");
-            Thread.sleep(150000);
+            Thread.sleep(300000);
             System.out.println("Installing the build....");
         } while (false);
         //while(!(new File("").exists()));

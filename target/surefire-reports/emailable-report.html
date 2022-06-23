@@ -9,15 +9,120 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">CWA Windows Sample</th></tr>
-<tr><td><a href="#t0">Admin Tests</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">585,406</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Admin Tests</a></td><td class="num">0</td><td class="num attn">6</td><td class="num">0</td><td class="num">0</td><td class="num">17,865</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">CWA Windows Sample</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Admin Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">prelaunch.AddStore_Login_Tests</td><td><a href="#m0">addStore</a></td><td rowspan="1">1655976406791</td><td rowspan="1">11567</td></tr><tr class="passedeven"><td><a href="#m1">loginTest</a></td><td rowspan="1">1655976418367</td><td rowspan="1">14872</td></tr><tr class="passedodd"><td rowspan="2">prelaunch.LogOff_Tests</td><td><a href="#m2">logoffCWAUser</a></td><td rowspan="1">1655976590084</td><td rowspan="1">9</td></tr><tr class="passedodd"><td><a href="#m3">logoffSessions</a></td><td rowspan="1">1655976590077</td><td rowspan="1">7</td></tr><tr class="passedeven"><td rowspan="2">prelaunch.SingleLaunch_Tests</td><td><a href="#m4">launchApp</a></td><td rowspan="1">1655976525404</td><td rowspan="1">64673</td></tr><tr class="passedeven"><td><a href="#m5">launchDesktop</a></td><td rowspan="1">1655976433241</td><td rowspan="1">92163</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">CWA Windows Sample</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Admin Tests &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">prelaunch.AddStore_Login_Tests</td><td><a href="#m0">setUp</a></td><td rowspan="1">1656005793509</td><td rowspan="1">17799</td></tr><tr><th colspan="4">Admin Tests &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="2">prelaunch.AddStore_Login_Tests</td><td><a href="#m1">addStore</a></td><td rowspan="1">1656005811336</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m2">loginTest</a></td><td rowspan="1">1656005811341</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td rowspan="2">prelaunch.LogOff_Tests</td><td><a href="#m3">logoffCWAUser</a></td><td rowspan="1">1656005811342</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td><a href="#m4">logoffSessions</a></td><td rowspan="1">1656005811343</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td rowspan="2">prelaunch.SingleLaunch_Tests</td><td><a href="#m5">launchApp</a></td><td rowspan="1">1656005811344</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m6">launchDesktop</a></td><td rowspan="1">1656005811342</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Admin Tests</h2><h3 id="m0">prelaunch.AddStore_Login_Tests#addStore</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">prelaunch.AddStore_Login_Tests#loginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">prelaunch.LogOff_Tests#logoffCWAUser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">prelaunch.LogOff_Tests#logoffSessions</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">prelaunch.SingleLaunch_Tests#launchApp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">prelaunch.SingleLaunch_Tests#launchDesktop</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Admin Tests</h2><h3 id="m0">prelaunch.AddStore_Login_Tests#setUp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: The system cannot find the file specified. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.84 seconds
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;WIN10EN-CT5UJHL&apos;, ip: &apos;10.150.138.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: driver.version: WindowsDriver
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;WIN10EN-CT5UJHL&apos;, ip: &apos;10.150.138.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: driver.version: WindowsDriver
+	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:216)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:225)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:247)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.windows.WindowsDriver.execute(WindowsDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:338)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:37)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:89)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:99)
+	at io.appium.java_client.windows.WindowsDriver.&lt;init&gt;(WindowsDriver.java:43)
+	at prelaunch.AddStore_Login_Tests.setUp(AddStore_Login_Tests.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:193)
+	... 44 more
+Caused by: org.openqa.selenium.WebDriverException: The system cannot find the file specified. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.84 seconds
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;WIN10EN-CT5UJHL&apos;, ip: &apos;10.150.138.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: driver.version: WindowsDriver
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$errorHandler$0(JsonWireProtocolResponse.java:54)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	... 49 more
+... Removed 39 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">prelaunch.AddStore_Login_Tests#addStore</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: The system cannot find the file specified. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.84 seconds
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;WIN10EN-CT5UJHL&apos;, ip: &apos;10.150.138.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: driver.version: WindowsDriver
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;WIN10EN-CT5UJHL&apos;, ip: &apos;10.150.138.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: driver.version: WindowsDriver
+	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:216)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:225)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:247)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.windows.WindowsDriver.execute(WindowsDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:338)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:37)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:89)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:99)
+	at io.appium.java_client.windows.WindowsDriver.&lt;init&gt;(WindowsDriver.java:43)
+	at prelaunch.AddStore_Login_Tests.setUp(AddStore_Login_Tests.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:193)
+	... 44 more
+Caused by: org.openqa.selenium.WebDriverException: The system cannot find the file specified. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.84 seconds
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;WIN10EN-CT5UJHL&apos;, ip: &apos;10.150.138.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: driver.version: WindowsDriver
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$errorHandler$0(JsonWireProtocolResponse.java:54)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	... 49 more
+... Removed 39 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">prelaunch.AddStore_Login_Tests#loginTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method AddStore_Login_Tests.loginTest()[pri:1, instance:prelaunch.AddStore_Login_Tests@5276e6b0] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">prelaunch.LogOff_Tests#logoffCWAUser</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method LogOff_Tests.logoffCWAUser()[pri:0, instance:prelaunch.LogOff_Tests@12e61fe6] depends on not successfully finished methods in group &quot;post_login&quot;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">prelaunch.LogOff_Tests#logoffSessions</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method LogOff_Tests.logoffSessions()[pri:0, instance:prelaunch.LogOff_Tests@12e61fe6] depends on not successfully finished methods in group &quot;post_login&quot;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">prelaunch.SingleLaunch_Tests#launchApp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method SingleLaunch_Tests.launchApp()[pri:1, instance:prelaunch.SingleLaunch_Tests@7c469c48] depends on not successfully finished methods in group &quot;post_login&quot;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">prelaunch.SingleLaunch_Tests#launchDesktop</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method SingleLaunch_Tests.launchDesktop()[pri:0, instance:prelaunch.SingleLaunch_Tests@7c469c48] depends on not successfully finished methods in group &quot;post_login&quot;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

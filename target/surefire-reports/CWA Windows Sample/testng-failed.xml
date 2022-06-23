@@ -3,12 +3,6 @@
 <suite name="Failed suite [CWA Windows Sample]" guice-stage="DEVELOPMENT" verbose="0">
   <test thread-count="5" name="Admin Tests(failed)" verbose="0">
     <classes>
-      <class name="prelaunch.SingleLaunch_Tests">
-        <methods>
-          <include name="launchDesktop"/>
-          <include name="launchApp"/>
-        </methods>
-      </class> <!-- prelaunch.SingleLaunch_Tests -->
       <class name="prelaunch.AddStore_Login_Tests">
         <methods>
           <include name="loginTest"/>
@@ -16,6 +10,18 @@
           <include name="setUp"/>
         </methods>
       </class> <!-- prelaunch.AddStore_Login_Tests -->
+      <class name="prelaunch.LogOff_Tests">
+        <methods>
+          <include name="logoffSessions"/>
+          <include name="logoffCWAUser"/>
+        </methods>
+      </class> <!-- prelaunch.LogOff_Tests -->
+      <class name="prelaunch.SingleLaunch_Tests">
+        <methods>
+          <include name="launchDesktop"/>
+          <include name="launchApp"/>
+        </methods>
+      </class> <!-- prelaunch.SingleLaunch_Tests -->
     </classes>
   </test> <!-- Admin Tests(failed) -->
 </suite> <!-- Failed suite [CWA Windows Sample] -->

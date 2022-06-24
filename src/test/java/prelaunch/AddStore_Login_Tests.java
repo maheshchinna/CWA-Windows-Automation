@@ -23,22 +23,22 @@ public class AddStore_Login_Tests extends PropertiesFile {
     @BeforeClass
     void setUp() throws IOException, InterruptedException {
         // Process process = new ProcessBuilder("").start();
-        Thread.sleep(5000);
+        Thread.sleep(2000);
         Desktop desktop = Desktop.getDesktop();
         String WinAppDrv = System.getProperty("user.dir")+"\\Dependencies\\Windows Application Driver\\WinAppDriver.exe";
         desktop.open(new File(WinAppDrv));
         //Runtime.getRuntime().exec("Dependencies\\Windows Application Driver\\WinAppDriver.exe");
-        Thread.sleep(10000);
+        Thread.sleep(5000);
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("app", "C:\\Program Files (x86)\\Citrix\\ICA Client\\SelfServicePlugin\\SelfService.exe");
         capabilities.setCapability("platformName", "Windows 10");
         capabilities.setCapability("deviceName", "Windows");
         driver = new WindowsDriver(new URL("http://127.0.0.1:4723"), capabilities);
-        driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);
     }
 
     @Test(priority = 0)
-    void addStore() throws InterruptedException, IOException {
+    void addStore() throws  IOException {
         //Thread.sleep(2000);
         WebDriverWait driverWait =new WebDriverWait(driver, 10);
        /* driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.name("EmailOrServerTextField")

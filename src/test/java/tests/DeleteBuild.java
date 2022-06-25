@@ -1,4 +1,4 @@
-package prelaunch;
+package tests;
 
 import org.testng.annotations.AfterSuite;
 

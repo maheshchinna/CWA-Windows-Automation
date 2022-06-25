@@ -61,7 +61,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-CWA_Windows_Sample" class="navigator-link ">
-                    <span>1 group</span>
+                    <span>3 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,32 +104,32 @@
                     <div class="method-list-content skipped suite-CWA_Windows_Sample">
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-CWA_Windows_Sample" title="prelaunch.AddStore_Login_Tests" class="method navigator-link" hash-for-method="addStore">addStore</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-CWA_Windows_Sample" title="tests.AddStore_Test" class="method navigator-link" hash-for-method="addStore">addStore</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-CWA_Windows_Sample" title="prelaunch.SingleLaunch_Tests" class="method navigator-link" hash-for-method="launchApp">launchApp</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-CWA_Windows_Sample" title="tests.App_Desktop_Launch_Tests" class="method navigator-link" hash-for-method="launchApp">launchApp</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-CWA_Windows_Sample" title="prelaunch.SingleLaunch_Tests" class="method navigator-link" hash-for-method="launchDesktop">launchDesktop</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-CWA_Windows_Sample" title="tests.App_Desktop_Launch_Tests" class="method navigator-link" hash-for-method="launchDesktop">launchDesktop</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-CWA_Windows_Sample" title="prelaunch.AddStore_Login_Tests" class="method navigator-link" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-CWA_Windows_Sample" title="tests.OnPrem_Login_Test" class="method navigator-link" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-CWA_Windows_Sample" title="prelaunch.LogOff_Tests" class="method navigator-link" hash-for-method="logoffCWAUser">logoffCWAUser</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-CWA_Windows_Sample" title="tests.LogOff_Tests" class="method navigator-link" hash-for-method="logoffCWAUser">logoffCWAUser</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-CWA_Windows_Sample" title="prelaunch.LogOff_Tests" class="method navigator-link" hash-for-method="logoffSessions">logoffSessions</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-CWA_Windows_Sample" title="tests.LogOff_Tests" class="method navigator-link" hash-for-method="logoffSessions">logoffSessions</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content skipped suite-CWA_Windows_Sample -->
@@ -147,7 +147,26 @@
           <div class="suite-CWA_Windows_Sample-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
-              <span class="class-name">prelaunch.AddStore_Login_Tests</span>
+              <span class="class-name">tests.OnPrem_Login_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginTest">
+                  </a> <!-- loginTest -->
+                  <span class="method-name">loginTest</span>
+                  <div class="stack-trace">java.lang.Throwable: Method OnPrem_Login_Test.loginTest()[pri:0, instance:tests.OnPrem_Login_Test@670002] depends on not successfully finished methods in group &quot;add_Store&quot;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 22 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-CWA_Windows_Sample-class-skipped -->
+          <div class="suite-CWA_Windows_Sample-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">tests.AddStore_Test</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -155,17 +174,13 @@
                   <a name="addStore">
                   </a> <!-- addStore -->
                   <span class="method-name">addStore</span>
-                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: The system cannot find the file specified. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.84 seconds
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Connection refused: no further information
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;WIN10EN-CT5UJHL&apos;, ip: &apos;10.150.138.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
 Driver info: driver.version: WindowsDriver
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;WIN10EN-CT5UJHL&apos;, ip: &apos;10.150.138.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
-Driver info: driver.version: WindowsDriver
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:216)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:225)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:247)
+	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$6(AppiumCommandExecutor.java:259)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:258)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
 	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
@@ -177,43 +192,43 @@ Driver info: driver.version: WindowsDriver
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:89)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:99)
 	at io.appium.java_client.windows.WindowsDriver.&lt;init&gt;(WindowsDriver.java:43)
-	at prelaunch.AddStore_Login_Tests.setUp(AddStore_Login_Tests.java:36)
+	at utilities.WinAppDriverSetUp.setDriverForCWA(WinAppDriverSetUp.java:24)
+	at tests.AddStore_Test.setUp(AddStore_Test.java:21)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:129)
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:245)
+	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:165)
+	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)
+	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)
+	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
+	at okhttp3.RealCall.execute(RealCall.java:77)
+	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
+	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$1(AppiumCommandExecutor.java:162)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:105)
 	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:193)
-	... 44 more
-Caused by: org.openqa.selenium.WebDriverException: The system cannot find the file specified. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.84 seconds
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;WIN10EN-CT5UJHL&apos;, ip: &apos;10.150.138.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
-Driver info: driver.version: WindowsDriver
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$errorHandler$0(JsonWireProtocolResponse.java:54)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
-	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
-	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	... 49 more
-... Removed 39 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="loginTest">
-                  </a> <!-- loginTest -->
-                  <span class="method-name">loginTest</span>
-                  <div class="stack-trace">java.lang.Throwable: Method AddStore_Login_Tests.loginTest()[pri:1, instance:prelaunch.AddStore_Login_Tests@5276e6b0] depends on not successfully finished methods
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 22 stack frames
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:225)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:247)
+	... 43 more
+... Removed 33 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -222,7 +237,7 @@ Driver info: driver.version: WindowsDriver
           <div class="suite-CWA_Windows_Sample-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
-              <span class="class-name">prelaunch.LogOff_Tests</span>
+              <span class="class-name">tests.LogOff_Tests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -230,7 +245,7 @@ Driver info: driver.version: WindowsDriver
                   <a name="logoffCWAUser">
                   </a> <!-- logoffCWAUser -->
                   <span class="method-name">logoffCWAUser</span>
-                  <div class="stack-trace">java.lang.Throwable: Method LogOff_Tests.logoffCWAUser()[pri:0, instance:prelaunch.LogOff_Tests@12e61fe6] depends on not successfully finished methods in group &quot;post_login&quot;
+                  <div class="stack-trace">java.lang.Throwable: Method LogOff_Tests.logoffCWAUser()[pri:0, instance:tests.LogOff_Tests@49c386c8] depends on not successfully finished methods in group &quot;login_test&quot;
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 22 stack frames
 </div> <!-- stack-trace -->
@@ -241,7 +256,7 @@ Driver info: driver.version: WindowsDriver
                   <a name="logoffSessions">
                   </a> <!-- logoffSessions -->
                   <span class="method-name">logoffSessions</span>
-                  <div class="stack-trace">java.lang.Throwable: Method LogOff_Tests.logoffSessions()[pri:0, instance:prelaunch.LogOff_Tests@12e61fe6] depends on not successfully finished methods in group &quot;post_login&quot;
+                  <div class="stack-trace">java.lang.Throwable: Method LogOff_Tests.logoffSessions()[pri:0, instance:tests.LogOff_Tests@49c386c8] depends on not successfully finished methods in group &quot;launch_test&quot;
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 22 stack frames
 </div> <!-- stack-trace -->
@@ -252,7 +267,7 @@ Driver info: driver.version: WindowsDriver
           <div class="suite-CWA_Windows_Sample-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
-              <span class="class-name">prelaunch.SingleLaunch_Tests</span>
+              <span class="class-name">tests.App_Desktop_Launch_Tests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -260,7 +275,7 @@ Driver info: driver.version: WindowsDriver
                   <a name="launchApp">
                   </a> <!-- launchApp -->
                   <span class="method-name">launchApp</span>
-                  <div class="stack-trace">java.lang.Throwable: Method SingleLaunch_Tests.launchApp()[pri:1, instance:prelaunch.SingleLaunch_Tests@7c469c48] depends on not successfully finished methods in group &quot;post_login&quot;
+                  <div class="stack-trace">java.lang.Throwable: Method App_Desktop_Launch_Tests.launchApp()[pri:1, instance:tests.App_Desktop_Launch_Tests@1f0f1111] depends on not successfully finished methods in group &quot;login_test&quot;
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 22 stack frames
 </div> <!-- stack-trace -->
@@ -271,7 +286,7 @@ Driver info: driver.version: WindowsDriver
                   <a name="launchDesktop">
                   </a> <!-- launchDesktop -->
                   <span class="method-name">launchDesktop</span>
-                  <div class="stack-trace">java.lang.Throwable: Method SingleLaunch_Tests.launchDesktop()[pri:0, instance:prelaunch.SingleLaunch_Tests@7c469c48] depends on not successfully finished methods in group &quot;post_login&quot;
+                  <div class="stack-trace">java.lang.Throwable: Method App_Desktop_Launch_Tests.launchDesktop()[pri:0, instance:tests.App_Desktop_Launch_Tests@1f0f1111] depends on not successfully finished methods in group &quot;login_test&quot;
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 22 stack frames
 </div> <!-- stack-trace -->
@@ -291,9 +306,14 @@ Driver info: driver.version: WindowsDriver
 &lt;suite name=&quot;CWA Windows Sample&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Admin Tests&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;prelaunch.AddStore_Login_Tests&quot;/&gt;
-      &lt;class name=&quot;prelaunch.SingleLaunch_Tests&quot;/&gt;
-      &lt;class name=&quot;prelaunch.LogOff_Tests&quot;/&gt;
+      &lt;class name=&quot;tests.DownloadBuild&quot;/&gt;
+      &lt;class name=&quot;tests.Install_Test&quot;/&gt;
+      &lt;class name=&quot;tests.AddStore_Test&quot;/&gt;
+      &lt;class name=&quot;tests.OnPrem_Login_Test&quot;/&gt;
+      &lt;class name=&quot;tests.App_Desktop_Launch_Tests&quot;/&gt;
+      &lt;class name=&quot;tests.LogOff_Tests&quot;/&gt;
+      &lt;class name=&quot;tests.Uninstall_Test&quot;/&gt;
+      &lt;class name=&quot;tests.DeleteBuild&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Admin Tests --&gt;
 &lt;/suite&gt; &lt;!-- CWA Windows Sample --&gt;
@@ -307,7 +327,7 @@ Driver info: driver.version: WindowsDriver
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Admin Tests (3 classes)</span>
+                <span class="test-name">Admin Tests (8 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -318,7 +338,27 @@ Driver info: driver.version: WindowsDriver
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">post_login</span>
+              <span class="test-group-name">add_Store</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">addStore</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">launch_test</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">launchApp</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">launchDesktop</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">login_test</span>
               <br/>
               <div class="method-in-group">
                 <span class="method-in-group-name">loginTest</span>
@@ -343,28 +383,28 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'launchDesktop')
-data.setCell(0, 2, 'prelaunch.SingleLaunch_Tests')
+data.setCell(0, 1, 'logoffSessions')
+data.setCell(0, 2, 'tests.LogOff_Tests')
 data.setCell(0, 3, 0);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'launchApp')
-data.setCell(1, 2, 'prelaunch.SingleLaunch_Tests')
+data.setCell(1, 1, 'logoffCWAUser')
+data.setCell(1, 2, 'tests.LogOff_Tests')
 data.setCell(1, 3, 0);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'logoffSessions')
-data.setCell(2, 2, 'prelaunch.LogOff_Tests')
+data.setCell(2, 1, 'launchApp')
+data.setCell(2, 2, 'tests.App_Desktop_Launch_Tests')
 data.setCell(2, 3, 0);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'logoffCWAUser')
-data.setCell(3, 2, 'prelaunch.LogOff_Tests')
+data.setCell(3, 1, 'loginTest')
+data.setCell(3, 2, 'tests.OnPrem_Login_Test')
 data.setCell(3, 3, 0);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'loginTest')
-data.setCell(4, 2, 'prelaunch.AddStore_Login_Tests')
+data.setCell(4, 1, 'addStore')
+data.setCell(4, 2, 'tests.AddStore_Test')
 data.setCell(4, 3, 0);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'addStore')
-data.setCell(5, 2, 'prelaunch.AddStore_Login_Tests')
+data.setCell(5, 1, 'launchDesktop')
+data.setCell(5, 2, 'tests.App_Desktop_Launch_Tests')
 data.setCell(5, 3, 0);
 window.suiteTableData['CWA_Windows_Sample']= { tableData: data, tableDiv: 'times-div-CWA_Windows_Sample'}
 return data;
@@ -396,46 +436,80 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">prelaunch.AddStore_Login_Tests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.DownloadBuild</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">downloadCWABuild</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.Install_Test</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">installation</span>
+                <span class="method-start">507150 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.AddStore_Test</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">setUp</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">807767 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">addStore</span>
-                <span class="method-start">17827 ms</span>
+                <span class="method-start">808896 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.OnPrem_Login_Test</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">loginTest</span>
-                <span class="method-start">17832 ms</span>
+                <span class="method-start">808909 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">prelaunch.SingleLaunch_Tests</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">launchDesktop</span>
-                <span class="method-start">17833 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">prelaunch.LogOff_Tests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.LogOff_Tests</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">logoffCWAUser</span>
-                <span class="method-start">17833 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">logoffSessions</span>
-                <span class="method-start">17834 ms</span>
+                <span class="method-start">808910 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">prelaunch.SingleLaunch_Tests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.App_Desktop_Launch_Tests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">launchDesktop</span>
+                <span class="method-start">808910 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.Uninstall_Test</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">uninstallCWA</span>
+                <span class="method-start">808911 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.LogOff_Tests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">logoffSessions</span>
+                <span class="method-start">808911 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.App_Desktop_Launch_Tests</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">launchApp</span>
-                <span class="method-start">17835 ms</span>
+                <span class="method-start">808911 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.DeleteBuild</div> <!-- chronological-class-name -->
+              <div class="configuration-suite after">
+                <span class="method-name">deleteCWABuild</span>
+                <span class="method-start">2297093 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

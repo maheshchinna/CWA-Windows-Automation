@@ -1,4 +1,4 @@
-package prelaunch;
+package tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
 import utilities.PropertiesFile;
 import java.io.File;
 import java.io.IOException;
@@ -51,14 +50,13 @@ public class DownloadBuild extends PropertiesFile {
         ////div[contains(@id,'artifacts')] - Artifact Icon
 
         // To get build number
-        String latestBuildNumber = driver.findElement(By.xpath("//div[@class='Build__number--ER']/div/a/span/span/span")).getText();
+        String latestBuildNumber = driver.findElement(By.xpath("//div[@class='Build__number--ER']/div/a/span/span/span")).getText().strip();
         System.out.println("Build Number => "+ latestBuildNumber);
 
         String lastRunBuild=read_properties("previouslyRunBuild");
 
         if(latestBuildNumber == lastRunBuild) {
             System.out.println("No new build found");
-            driver.quit();
         }
         else{
             // Use latest build
@@ -87,7 +85,7 @@ public class DownloadBuild extends PropertiesFile {
 
             write_properties("previouslyRunBuild",latestBuildNumber);
 
-            driver.quit();
         }
+        driver.quit();
     }
 }

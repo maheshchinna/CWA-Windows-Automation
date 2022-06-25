@@ -1,11 +1,4 @@
-prelaunch\AddStore_Login_Tests.class
-prelaunch\Install_Test.class
 utilities\PropertiesFile.class
-prelaunch\LogOff_Tests.class
 UnitTest.class
-prelaunch\DeleteBuild.class
-prelaunch\DownloadBuild.class
 utilities\MyScreenRecorder.class
-prelaunch\Uninstall_Test.class
 backup\InstallBuild.class
-prelaunch\SingleLaunch_Tests.class

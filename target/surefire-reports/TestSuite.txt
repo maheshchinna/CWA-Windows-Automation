@@ -1,25 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 1, Errors: 0, Skipped: 6, Time elapsed: 18.735 s <<< FAILURE! - in TestSuite
-setUp(prelaunch.AddStore_Login_Tests)  Time elapsed: 18.433 s  <<< FAILURE!
-org.openqa.selenium.SessionNotCreatedException: 
-Unable to create a new remote session. Please check the server log for more details. Original error: The system cannot find the file specified. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.84 seconds
+Tests run: 7, Failures: 1, Errors: 0, Skipped: 6, Time elapsed: 2,298.68 s <<< FAILURE! - in TestSuite
+setUp(tests.AddStore_Test)  Time elapsed: 809.691 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+Connection refused: no further information
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'WIN10EN-CT5UJHL', ip: '10.150.138.64', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
 Driver info: driver.version: WindowsDriver
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'WIN10EN-CT5UJHL', ip: '10.150.138.64', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
-Driver info: driver.version: WindowsDriver
-	at prelaunch.AddStore_Login_Tests.setUp(AddStore_Login_Tests.java:36)
-Caused by: java.lang.reflect.InvocationTargetException
-	at prelaunch.AddStore_Login_Tests.setUp(AddStore_Login_Tests.java:36)
-Caused by: org.openqa.selenium.WebDriverException: 
-The system cannot find the file specified. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.84 seconds
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'WIN10EN-CT5UJHL', ip: '10.150.138.64', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
-Driver info: driver.version: WindowsDriver
-	at prelaunch.AddStore_Login_Tests.setUp(AddStore_Login_Tests.java:36)
+	at tests.AddStore_Test.setUp(AddStore_Test.java:21)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at tests.AddStore_Test.setUp(AddStore_Test.java:21)
 

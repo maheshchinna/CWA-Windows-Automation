@@ -12,13 +12,13 @@ public class CustomWait {
         for (int i = 0; i < 10; i++) {
             try{
                 boolean visibility = driver.findElementByAccessibilityId(locator).isDisplayed();
-                System.out.println(visibility);
+                //System.out.println(visibility);
                 if(visibility){
                     return true;
                 }
             }
             catch(Exception e){
-                System.out.println(locator + " Element not found");
+                System.out.println(locator + " Element not found, retrying");
             }
             Thread.sleep(1000);
         }

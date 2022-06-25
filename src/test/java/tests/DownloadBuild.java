@@ -83,7 +83,7 @@ public class DownloadBuild extends PropertiesFile {
 
             System.out.println("Successfully Downloaded the build");
 
-            write_properties("previouslyRunBuild",latestBuildNumber);
+            write_properties("previouslyRunBuild",latestBuildNumber.split("#")[1]);
 
         }
         driver.quit();

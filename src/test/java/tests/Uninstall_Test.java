@@ -14,7 +14,7 @@ public class Uninstall_Test {
         Runtime.getRuntime().exec(uninstallCMD);
         int count=0;
         do {
-            if (count==600000){
+            if (count==120){
                 Assert.assertTrue(false,"Uninstall failed");
                 break;
             }

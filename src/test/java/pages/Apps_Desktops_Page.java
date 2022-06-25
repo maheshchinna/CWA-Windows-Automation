@@ -31,8 +31,9 @@ public class Apps_Desktops_Page {
         AppsTabElement.click();
     }
 
-    public void launchAppDesktop(String AppDesktopName){
+    public void launchAppDesktop(String AppDesktopName) throws InterruptedException {
         WebElement appDesktopElement =driver.findElementByName(AppDesktopName);
         appDesktopElement.click();
+        Thread.sleep(60000);
     }
 }

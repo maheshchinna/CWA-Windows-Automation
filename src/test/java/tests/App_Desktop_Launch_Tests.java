@@ -12,7 +12,6 @@ public class App_Desktop_Launch_Tests extends PropertiesFile {
     WindowsDriver driver;
     Apps_Desktops_Page apps_desktops_page;
 
-
     @Test(dependsOnGroups = "login_test", groups = "launch_test")
     void launchDesktop() throws IOException, InterruptedException {
         this.driver=AddStore_Test.driver;
@@ -25,7 +24,7 @@ public class App_Desktop_Launch_Tests extends PropertiesFile {
     }
 
     @Test(priority = 1,dependsOnGroups = "login_test",groups = "launch_test")
-    void launchApp() throws IOException {
+    void launchApp() throws IOException, InterruptedException {
         apps_desktops_page.switchAppTab();
         apps_desktops_page.launchAppDesktop(read_properties("app1"));
         System.out.println(read_properties("app1")+" Desktop Launch successful");

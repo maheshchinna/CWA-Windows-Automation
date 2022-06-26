@@ -19,6 +19,7 @@ public class AddStore_Test extends PropertiesFile {
     void setUp() throws IOException, InterruptedException {
         WinAppDriverSetUp.openWinAppServer();
         driver = WinAppDriverSetUp.setDriverForCWA();
+        System.out.println("Self Service started..");
     }
 
     @Test(groups = "add_Store")

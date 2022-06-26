@@ -3,7 +3,7 @@
 <suite name="CWA Windows Sample">
     <test  name="Admin Tests">
         <classes>
-            <class name="tests.DownloadBuild"/>
+            <class name="tests.BuildDownloadSetUp"/>
             <class name="tests.Install_Test"/>
             <class name="tests.AddStore_Test"/>
             <class name="tests.OnPrem_Login_Test"/>

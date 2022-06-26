@@ -1,33 +1,20 @@
-import io.appium.java_client.windows.WindowsDriver;
-
 import org.junit.Test;
-import org.openqa.selenium.remote.DesiredCapabilities;
-
-import utilities.PropertiesFile;
-import java.awt.*;
-import java.io.File;
-
 import java.io.IOException;
-import java.net.URL;
-import java.util.concurrent.TimeUnit;
 
-public class UnitTest extends PropertiesFile {
+public class UnitTest   {
 
     @Test
-   public void sample() throws IOException {
-        Desktop desktop = Desktop.getDesktop();
-        String WinAppDrv = System.getProperty("user.dir")+"\\Dependencies\\Windows Application Driver\\WinAppDriver.exe";
-        desktop.open(new File(WinAppDrv));
-        // Process process = new ProcessBuilder("").start();
-        WindowsDriver driver;
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("app", "Notepad");
-        capabilities.setCapability("platformName", "Windows 10");
-        capabilities.setCapability("deviceName", "Windows");
-        driver = new WindowsDriver(new URL("http://127.0.0.1:4723"), capabilities);
-        driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
+   public void sample() throws IOException, InterruptedException {
 
-        Runtime.getRuntime().exec(WinAppDrv).destroy();
+        String[] enableDevMode = {"regedit", "/s", System.getProperty("user.dir")+"\\Dependencies\\devModeOn.reg"};
+        Runtime.getRuntime().exec(enableDevMode);
+        Thread.sleep(2000);
+        System.out.println("Dev Mode enabled");
+
+        String installWinAppDriver = System.getProperty("user.dir")+"\\Dependencies\\WindowsApplicationDriver-1.2.99-win-x64.exe /silent";
+        Runtime.getRuntime().exec(installWinAppDriver);
+        Thread.sleep(90000);
+        System.out.println("Win App Driver installed");
 
     }
 }

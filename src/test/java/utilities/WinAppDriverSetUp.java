@@ -10,11 +10,24 @@ import java.net.URL;
 
 public class WinAppDriverSetUp {
 
+    public static void envSetUp() throws IOException, InterruptedException {
+            String[] enableDevMode = {"regedit", "/s", System.getProperty("user.dir")+"\\Dependencies\\devModeOn.reg"};
+            Runtime.getRuntime().exec(enableDevMode);
+            Thread.sleep(2000);
+            System.out.println("Dev Mode enabled");
+
+            String installWinAppDriver = System.getProperty("user.dir")+"\\Dependencies\\WindowsApplicationDriver-1.2.99-win-x64.exe /silent";
+            Runtime.getRuntime().exec(installWinAppDriver);
+            Thread.sleep(120000);
+            System.out.println("Win App Driver installed");
+    }
+
     public static void openWinAppServer() throws IOException, InterruptedException {
         Desktop desktop = Desktop.getDesktop();
-        String WinAppDrv = System.getProperty("user.dir")+"\\Dependencies\\Windows Application Driver\\WinAppDriver.exe";
+        String WinAppDrv = "C:\\Program Files\\Windows Application Driver\\WinAppDriver.exe";
         desktop.open(new File(WinAppDrv));
         Thread.sleep(5000);
+        System.out.println("Win App Driver server started..");
     }
 
     public static WindowsDriver setDriverForCWA() throws MalformedURLException {

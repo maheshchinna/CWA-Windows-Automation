@@ -2,8 +2,7 @@ package pages;
 
 import io.appium.java_client.windows.WindowsDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
-import utilities.CustomWait;
+import utilities.WaitForElement;
 import utilities.PropertiesFile;
 
 import java.io.IOException;
@@ -22,17 +21,18 @@ public class Add_Account_Page extends PropertiesFile {
 
   //Method to type store
   public void enterStore() throws IOException {
-   CustomWait.inBuiltWaitForName(driver, storeLocator);
-   WebElement storeEle = driver.findElementByName(storeLocator);
-   if (storeEle.isDisplayed()) {
+   WebElement storeEle = WaitForElement.getElementWithWaitName(driver, storeLocator);
+   if (storeEle != null) {
     storeEle.sendKeys(read_properties("storeURL"));
    }
   }
 
   // Method to click on add store
   public void clickContinue() {
-   WebElement continueEle = driver.findElementByName(continueLocator);
-   continueEle.click();
+   WebElement continueEle = WaitForElement.getElementWithWaitName(driver, continueLocator);
+   if (continueEle != null) {
+    continueEle.click();
+   }
   }
 
  }

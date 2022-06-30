@@ -7,8 +7,8 @@ import java.io.File;
 public class DeleteBuild {
 
     @AfterSuite
-    void deleteCWABuild(){
-
+    void deleteCWABuild() throws InterruptedException {
+        Thread.sleep(5000);
         File cwa_file = new File(System.getProperty("user.dir")+"\\Builds\\CitrixWorkspaceApp.exe");
 
         if (cwa_file.delete()) {

@@ -16,6 +16,7 @@ public class WinAppDriverSetUp {
             Thread.sleep(2000);
             System.out.println("Dev Mode enabled");
 
+            System.out.println("Installation started for Win App Driver...");
             String installWinAppDriver = System.getProperty("user.dir")+"\\Dependencies\\WindowsApplicationDriver-1.2.99-win-x64.exe /silent";
             Runtime.getRuntime().exec(installWinAppDriver);
             Thread.sleep(120000);
@@ -34,6 +35,7 @@ public class WinAppDriverSetUp {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("app", "C:\\Program Files (x86)\\Citrix\\ICA Client\\SelfServicePlugin\\SelfService.exe");
         capabilities.setCapability("platformName", "Windows 10");
+        capabilities.setCapability("createSessionTimeout",120000);
         capabilities.setCapability("deviceName", "Windows");
         return new WindowsDriver(new URL("http://127.0.0.1:4723"), capabilities);
     }

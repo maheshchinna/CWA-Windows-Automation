@@ -2,10 +2,6 @@ package pages;
 
 import io.appium.java_client.windows.WindowsDriver;
 import org.openqa.selenium.WebElement;
-import utilities.CustomWait;
-import utilities.PropertiesFile;
-
-import java.io.IOException;
 
 public class OnPrem_Login_Page   {
 

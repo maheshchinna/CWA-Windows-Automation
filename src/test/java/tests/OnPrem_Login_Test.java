@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.OnPrem_Login_Page;
-import utilities.CustomWait;
+import utilities.WaitForElement;
 import utilities.PropertiesFile;
 
 import java.io.IOException;
@@ -21,8 +21,8 @@ public class OnPrem_Login_Test extends PropertiesFile {
         onPrem_login_page.enterUsername(read_properties("store_username"));
         onPrem_login_page.enterPassword(read_properties("store_password"));
         onPrem_login_page.clickLoginBtn();
-        WebElement sspHomeElement = CustomWait.getElementWithWaitId(driver, "myHomeBtn");
-        Assert.assertTrue(sspHomeElement.isDisplayed());
+        WebElement sspHomeElement = WaitForElement.getElementWithWaitId(driver, "myHomeBtn");
+        Assert.assertTrue(sspHomeElement!=null);
         System.out.println("Login completed successfully");
     }
 }

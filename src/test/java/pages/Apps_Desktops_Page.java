@@ -2,15 +2,12 @@ package pages;
 
 import io.appium.java_client.windows.WindowsDriver;
 import org.openqa.selenium.WebElement;
-import utilities.CustomWait;
-
-import java.io.IOException;
-
+import utilities.WaitForElement;
 public class Apps_Desktops_Page {
 
     WindowsDriver driver;
 
-    public Apps_Desktops_Page(WindowsDriver driver) throws IOException {
+    public Apps_Desktops_Page(WindowsDriver driver) {
         this.driver = driver;
     }
 
@@ -18,22 +15,36 @@ public class Apps_Desktops_Page {
 
     private String AppsTabLocator="allAppsBtn";
 
-    //Method to type store
+    //Method to switch desktop tab
     public void switchDesktopTab() throws InterruptedException {
-        WebElement desktopTabElement = CustomWait.getElementWithWaitId(driver, desktopTabLocator);
-        desktopTabElement.click();
+        System.out.println("Switching to desktop tab");
+        WebElement desktopTabElement = WaitForElement.getElementWithWaitId(driver, desktopTabLocator);
+        System.out.println(desktopTabElement);
+        if (desktopTabElement!=null) {
+            Thread.sleep(5000);
+            desktopTabElement.click();
+            System.out.println("Switched to desktop tab");
+        }
     }
 
-    //Method to type store
+    //Method to switch app tab
     public void switchAppTab() throws InterruptedException {
-        WebElement AppsTabElement = CustomWait.getElementWithWaitId(driver, AppsTabLocator);;
-        AppsTabElement.click();
+        System.out.println("Switching to app tab");
+        WebElement appsTabElement = WaitForElement.getElementWithWaitId(driver, AppsTabLocator);;
+        if (appsTabElement!=null) {
+            Thread.sleep(5000);
+            appsTabElement.click();
+            System.out.println("Switched to app tab");
+        }
     }
 
     public void launchAppDesktop(String AppDesktopName) throws InterruptedException {
-        CustomWait.inBuiltWaitForName(driver,AppDesktopName);
+        WaitForElement.getElementWithWaitName(driver,AppDesktopName);
         WebElement appDesktopElement =driver.findElementByName(AppDesktopName);
-        appDesktopElement.click();
+        if (appDesktopElement!=null) {
+            appDesktopElement.click();
+            System.out.println("Clicked on "+AppDesktopName+" resource");
+        }
         Thread.sleep(60000);
     }
 }

@@ -14,18 +14,16 @@ public class Uninstall_Test {
         Runtime.getRuntime().exec(uninstallCMD);
         int count=0;
         do {
+            System.out.println("Uninstalling the CWA Win build....");
+            Thread.sleep(5000);
+            count++;
             if (count==120){
                 Assert.assertTrue(false,"Uninstall failed");
                 break;
             }
-            else {
-                Thread.sleep(5000);
-                System.out.println("uninstalling the build....");
-                count++;
-            }
         }while(new File("C:\\Program Files (x86)\\Citrix\\ICA Client").exists());
         System.out.println("Uninstall passed");
-        Thread.sleep(3000);
+
     }
 
 }

@@ -2,6 +2,7 @@ package tests;
 
 import io.appium.java_client.windows.WindowsDriver;
 
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -27,7 +28,8 @@ public class AddStore_Test extends PropertiesFile {
         Add_Account_Page add_account_page = new Add_Account_Page(driver);
         add_account_page.enterStore();
         add_account_page.clickContinue();
-        Assert.assertTrue(CustomWait.waitForElementId(driver, "username"));
+        WebElement usernameElement = CustomWait.getElementWithWaitId(driver, "username");
+        Assert.assertTrue(usernameElement.isDisplayed());
         System.out.println("Store Added successfully");
     }
 

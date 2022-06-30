@@ -25,6 +25,7 @@ public class Uninstall_Test {
             }
         }while(new File("C:\\Program Files (x86)\\Citrix\\ICA Client").exists());
         System.out.println("Uninstall passed");
+        Thread.sleep(3000);
     }
 
 }

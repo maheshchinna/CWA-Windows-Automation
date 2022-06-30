@@ -20,18 +20,18 @@ public class Apps_Desktops_Page {
 
     //Method to type store
     public void switchDesktopTab() throws InterruptedException {
-        CustomWait.waitForElementId(driver, desktopTabLocator);
-        WebElement desktopTabElement = driver.findElementByAccessibilityId(desktopTabLocator);
+        WebElement desktopTabElement = CustomWait.getElementWithWaitId(driver, desktopTabLocator);
         desktopTabElement.click();
     }
 
     //Method to type store
-    public void switchAppTab() {
-        WebElement AppsTabElement = driver.findElementByAccessibilityId(AppsTabLocator);
+    public void switchAppTab() throws InterruptedException {
+        WebElement AppsTabElement = CustomWait.getElementWithWaitId(driver, AppsTabLocator);;
         AppsTabElement.click();
     }
 
     public void launchAppDesktop(String AppDesktopName) throws InterruptedException {
+        CustomWait.inBuiltWaitForName(driver,AppDesktopName);
         WebElement appDesktopElement =driver.findElementByName(AppDesktopName);
         appDesktopElement.click();
         Thread.sleep(60000);

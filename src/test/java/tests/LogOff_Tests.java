@@ -12,13 +12,10 @@ public class LogOff_Tests {
         System.out.println("All sessions are logged-off");
     }
 
-    @Test(dependsOnGroups = "login_test")
+    @Test(priority = 1,dependsOnGroups = "login_test")
     void logoffCWAUser() throws IOException {
         String CWAUserLogoff = "C:\\Program Files (x86)\\Citrix\\ICA Client\\SelfServicePlugin\\SelfService.exe -logoff";
         Runtime.getRuntime().exec(CWAUserLogoff);
         System.out.println("CWA Logoff passed");
     }
-
-
-
 }

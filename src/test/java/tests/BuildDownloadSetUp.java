@@ -40,29 +40,31 @@ public class BuildDownloadSetUp extends PropertiesFile {
         System.out.println("Branch => "+ title);
 
         // Switch to Successful Builds tab
+
         driver.findElement(By.xpath("//button[@title='Successful']")).click();
 
         /* Customized build number
         build_Num = input("Input the Build number:")
         driver.find_element_by_link_text("#"+build_Num).click()
         */
-        // Get the USERINFO section
+        // Get the section
         //temp_build = config_object['installation']['last_run_build']
 
         ////div[contains(@id,'artifacts')] - Artifact Icon
 
         // To get build number
-        String latestBuildNumber = driver.findElement(By.xpath("//div[@class='Build__number--ER']/div/a/span/span/span")).getText().strip();
+        Thread.sleep(5000);
+        String latestBuildNumber = driver.findElement(By.xpath("//div[@class='Build__number--ER']/div/a/span/span/span")).getText().split("#")[1];
         System.out.println("Build Number => "+ latestBuildNumber);
 
         String lastRunBuild=read_properties("previouslyRunBuild");
 
-        if(latestBuildNumber == lastRunBuild) {
+        if(latestBuildNumber.equals(lastRunBuild)) {
             System.out.println("No new build found");
         }
         else{
             // Use latest build
-            Thread.sleep(5000);
+            Thread.sleep(3000);
             driver.findElement(By.xpath("//div[@class='Build__number--ER']/div/a")).click();
 
             String build_number_date = driver.findElement(By.xpath("//div[@class='selected']/span")).getText();
@@ -85,7 +87,7 @@ public class BuildDownloadSetUp extends PropertiesFile {
 
             System.out.println("Successfully Downloaded the build");
 
-            write_properties("previouslyRunBuild",latestBuildNumber.split("#")[1]);
+            write_properties("previouslyRunBuild",latestBuildNumber);
 
         }
         driver.quit();

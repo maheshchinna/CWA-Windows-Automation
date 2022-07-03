@@ -7,9 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
 import utilities.PropertiesFile;
 import utilities.WinAppDriverSetUp;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 
 public class BuildDownloadSetUp extends PropertiesFile {
 
-    @BeforeSuite
+    @Test
     void downloadCWABuild_setUp() throws IOException, InterruptedException {
         WebDriver driver;
         ChromeOptions options = new ChromeOptions();
@@ -30,9 +30,10 @@ public class BuildDownloadSetUp extends PropertiesFile {
         driver = new ChromeDriver(options);        //driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
 
-        String branch=read_properties("branch");
-        String build_url = "https://ftltc01.eng.citrite.net/viewType.html?buildTypeId=RfWin_" + branch + "_ICAClientCore";
-        driver.get(build_url);
+        String branch=PropertiesFile.read_properties("branch");
+        String branch_url = PropertiesFile.read_properties("url")+"_"+branch+"_ICAClientCore";
+        System.out.println("Branch Info "+branch_url);
+        driver.get(branch_url);
 
         driver.findElement(By.linkText("Log in as guest")).click();
         String title= driver.getTitle();

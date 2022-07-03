@@ -70,6 +70,7 @@
       <artifactId>autoit</artifactId>
       <version>0.2.44</version>
     </dependency>
+
   </dependencies>
 
   <build>

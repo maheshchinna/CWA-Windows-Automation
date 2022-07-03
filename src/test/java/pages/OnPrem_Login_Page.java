@@ -35,4 +35,8 @@ public class OnPrem_Login_Page   {
         LoginBtnEle.click();
     }
 
+     /*public static boolean loginPage() throws InterruptedException {
+        WebElement usernameElement = WaitForElement.getElementWithWaitId(driver, "usernameLocator");
+        return usernameElement.isDisplayed();
+    }*/
 }

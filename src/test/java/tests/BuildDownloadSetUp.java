@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 
 public class BuildDownloadSetUp extends PropertiesFile {
 
-    @Test
+    @BeforeSuite
     void downloadCWABuild_setUp() throws IOException, InterruptedException {
         WebDriver driver;
         ChromeOptions options = new ChromeOptions();

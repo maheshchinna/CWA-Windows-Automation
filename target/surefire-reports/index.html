@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-CWA_Windows_Sample" class="navigator-link">
-              <span class="suite-name border-skipped">CWA Windows Sample</span>
+              <span class="suite-name border-failed">CWA Windows Sample</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,  6 skipped,  </span>
+                    <span class="method-stats">6 methods, 1 failed,  5 skipped,  </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-CWA_Windows_Sample" class="hide-methods failed suite-CWA_Windows_Sample"> (hide)</a> <!-- hide-methods failed suite-CWA_Windows_Sample -->
+                      <a href="#" panel-name="suite-CWA_Windows_Sample" class="show-methods failed suite-CWA_Windows_Sample"> (show)</a> <!-- show-methods failed suite-CWA_Windows_Sample -->
+                    </span>
+                    <div class="method-list-content failed suite-CWA_Windows_Sample">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CWA_Windows_Sample" title="tests.AddStore_Test" class="method navigator-link" hash-for-method="addStore">addStore</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-CWA_Windows_Sample -->
                   </li>
                   <li>
                     <span class="method-list-title skipped">Skipped methods</span>
@@ -102,11 +116,6 @@
                       <a href="#" panel-name="suite-CWA_Windows_Sample" class="show-methods skipped suite-CWA_Windows_Sample"> (show)</a> <!-- show-methods skipped suite-CWA_Windows_Sample -->
                     </span>
                     <div class="method-list-content skipped suite-CWA_Windows_Sample">
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-CWA_Windows_Sample" title="tests.AddStore_Test" class="method navigator-link" hash-for-method="addStore">addStore</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-CWA_Windows_Sample" title="tests.App_Desktop_Launch_Tests" class="method navigator-link" hash-for-method="launchApp">launchApp</a> <!-- method navigator-link -->
@@ -144,6 +153,46 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-CWA_Windows_Sample" class="panel CWA_Windows_Sample">
+          <div class="suite-CWA_Windows_Sample-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">tests.AddStore_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addStore">
+                  </a> <!-- addStore -->
+                  <span class="method-name">addStore</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: An unknown error occurred in the remote end while processing the command. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;WIN10EN-CT5UJHL&apos;, ip: &apos;10.150.138.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: io.appium.java_client.windows.WindowsDriver
+Capabilities {app: C:\Program Files (x86)\Citr..., javascriptEnabled: true, platform: WIN10, platformName: Windows 10}
+Session ID: B06B2815-5168-4055-B6FB-016C483AA39A
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:247)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.windows.WindowsDriver.execute(WindowsDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
+	at pages.Add_Account_Page.enterStore(Add_Account_Page.java:26)
+	at tests.AddStore_Test.addStore(AddStore_Test.java:30)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-CWA_Windows_Sample-class-failed -->
           <div class="suite-CWA_Windows_Sample-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
@@ -188,33 +237,6 @@
                   <div class="stack-trace">java.lang.Throwable: Method OnPrem_Login_Test.loginTest()[pri:0, instance:tests.OnPrem_Login_Test@1ed1993a] depends on not successfully finished methods in group &quot;add_Store&quot;
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 22 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-CWA_Windows_Sample-class-skipped -->
-          <div class="suite-CWA_Windows_Sample-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">tests.AddStore_Test</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="addStore">
-                  </a> <!-- addStore -->
-                  <span class="method-name">addStore</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Cannot locate an element using xpath=//button[@title=&apos;Successful&apos;]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;WIN10EN-CT5UJHL&apos;, ip: &apos;10.150.138.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at tests.BuildDownloadSetUp.downloadCWABuild_setUp(BuildDownloadSetUp.java:45)
-... Removed 23 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -339,34 +361,34 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loginTest')
-data.setCell(0, 2, 'tests.OnPrem_Login_Test')
-data.setCell(0, 3, 0);
+data.setCell(0, 1, 'addStore')
+data.setCell(0, 2, 'tests.AddStore_Test')
+data.setCell(0, 3, 4706);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'launchDesktop')
-data.setCell(1, 2, 'tests.App_Desktop_Launch_Tests')
+data.setCell(1, 1, 'logoffCWAUser')
+data.setCell(1, 2, 'tests.LogOff_Tests')
 data.setCell(1, 3, 0);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'addStore')
-data.setCell(2, 2, 'tests.AddStore_Test')
+data.setCell(2, 1, 'loginTest')
+data.setCell(2, 2, 'tests.OnPrem_Login_Test')
 data.setCell(2, 3, 0);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'launchApp')
-data.setCell(3, 2, 'tests.App_Desktop_Launch_Tests')
+data.setCell(3, 1, 'logoffSessions')
+data.setCell(3, 2, 'tests.LogOff_Tests')
 data.setCell(3, 3, 0);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'logoffSessions')
-data.setCell(4, 2, 'tests.LogOff_Tests')
+data.setCell(4, 1, 'launchApp')
+data.setCell(4, 2, 'tests.App_Desktop_Launch_Tests')
 data.setCell(4, 3, 0);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'logoffCWAUser')
-data.setCell(5, 2, 'tests.LogOff_Tests')
+data.setCell(5, 1, 'launchDesktop')
+data.setCell(5, 2, 'tests.App_Desktop_Launch_Tests')
 data.setCell(5, 3, 0);
 window.suiteTableData['CWA_Windows_Sample']= { tableData: data, tableDiv: 'times-div-CWA_Windows_Sample'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-CWA_Windows_Sample">
               </div> <!-- times-div-CWA_Windows_Sample -->
             </div> <!-- times-div -->
@@ -394,8 +416,6 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">tests.BuildDownloadSetUp</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">downloadCWABuild_setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
@@ -404,64 +424,65 @@ return data;
               <div class="chronological-class-name">tests.Install_Test</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">installation</span>
-                <span class="method-start">56345 ms</span>
+                <span class="method-start">107567 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.AddStore_Test</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">56370 ms</span>
+                <span class="method-start">408123 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">addStore</span>
-                <span class="method-start">56384 ms</span>
+                <span class="method-start">423267 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.OnPrem_Login_Test</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">loginTest</span>
-                <span class="method-start">56388 ms</span>
+                <span class="method-start">427998 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.App_Desktop_Launch_Tests</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">launchDesktop</span>
-                <span class="method-start">56389 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
                 <span class="method-name">launchApp</span>
-                <span class="method-start">56389 ms</span>
+                <span class="method-start">428000 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.LogOff_Tests</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">logoffSessions</span>
-                <span class="method-start">56391 ms</span>
+                <span class="method-name">launchDesktop</span>
+                <span class="method-start">428000 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.Uninstall_Test</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">uninstallCWA</span>
-                <span class="method-start">56392 ms</span>
+                <span class="method-start">428001 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.LogOff_Tests</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">logoffCWAUser</span>
-                <span class="method-start">56392 ms</span>
+                <span class="method-start">428001 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">logoffSessions</span>
+                <span class="method-start">428001 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.DeleteBuild</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">deleteCWABuild</span>
-                <span class="method-start">56449 ms</span>
+                <span class="method-start">1029113 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

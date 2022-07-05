@@ -1,4 +1,5 @@
 utilities\PropertiesFile.class
+tests\OnPrem_Login_Test.class
 UnitTest.class
 utilities\MyScreenRecorder.class
 backup\InstallBuild.class

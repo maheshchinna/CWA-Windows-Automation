@@ -88,7 +88,7 @@ public class BuildDownloadSetUp extends GetSetJSONData {
 
             System.out.println("Successfully Downloaded the build");
 
-            setValue("previouslyRunBuild",latestBuildNumber);
+            //setValue("previouslyRunBuild",latestBuildNumber);
 
         }
         driver.quit();

@@ -4,7 +4,6 @@ import io.appium.java_client.windows.WindowsDriver;
 import org.testng.annotations.Test;
 import pages.Apps_Desktops_Page;
 import utilities.GetSetJSONData;
-import java.io.IOException;
 
 public class App_Desktop_Launch_Tests extends GetSetJSONData {
 
@@ -12,7 +11,7 @@ public class App_Desktop_Launch_Tests extends GetSetJSONData {
     Apps_Desktops_Page apps_desktops_page;
 
     @Test(dependsOnGroups = "login_test", groups = "launch_test")
-    void launchDesktop() throws IOException, InterruptedException {
+    void launchDesktop() throws InterruptedException {
         this.driver=AddStore_Test.driver;
         apps_desktops_page =new Apps_Desktops_Page(driver);
         apps_desktops_page.switchDesktopTab();
@@ -24,7 +23,7 @@ public class App_Desktop_Launch_Tests extends GetSetJSONData {
     }
 
     @Test(priority = 1,dependsOnGroups = "login_test",groups = "launch_test")
-    void launchApp() throws IOException, InterruptedException {
+    void launchApp() throws InterruptedException {
         apps_desktops_page.switchAppTab();
         System.out.println("Launching app session...");
         apps_desktops_page.launchAppDesktop(getValue("app1"));

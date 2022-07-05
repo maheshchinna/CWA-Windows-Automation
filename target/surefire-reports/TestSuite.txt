@@ -1,14 +1,13 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 1, Errors: 0, Skipped: 6, Time elapsed: 2,298.68 s <<< FAILURE! - in TestSuite
-setUp(tests.AddStore_Test)  Time elapsed: 809.691 s  <<< FAILURE!
-org.openqa.selenium.WebDriverException: 
-Connection refused: no further information
+Tests run: 11, Failures: 1, Errors: 0, Skipped: 10, Time elapsed: 57.769 s <<< FAILURE! - in TestSuite
+downloadCWABuild_setUp(tests.BuildDownloadSetUp)  Time elapsed: 57.42 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using xpath=//button[@title='Successful']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'WIN10EN-CT5UJHL', ip: '10.150.138.64', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
-Driver info: driver.version: WindowsDriver
-	at tests.AddStore_Test.setUp(AddStore_Test.java:21)
-Caused by: java.net.ConnectException: Connection refused: no further information
-	at tests.AddStore_Test.setUp(AddStore_Test.java:21)
+Driver info: driver.version: RemoteWebDriver
+	at tests.BuildDownloadSetUp.downloadCWABuild_setUp(BuildDownloadSetUp.java:45)
 

@@ -3,6 +3,12 @@
 <suite name="Failed suite [CWA Windows Sample]" guice-stage="DEVELOPMENT" verbose="0">
   <test thread-count="5" name="Admin Tests(failed)" verbose="0">
     <classes>
+      <class name="tests.App_Desktop_Launch_Tests">
+        <methods>
+          <include name="launchApp"/>
+          <include name="launchDesktop"/>
+        </methods>
+      </class> <!-- tests.App_Desktop_Launch_Tests -->
       <class name="tests.OnPrem_Login_Test">
         <methods>
           <include name="loginTest"/>
@@ -20,12 +26,6 @@
           <include name="logoffSessions"/>
         </methods>
       </class> <!-- tests.LogOff_Tests -->
-      <class name="tests.App_Desktop_Launch_Tests">
-        <methods>
-          <include name="launchApp"/>
-          <include name="launchDesktop"/>
-        </methods>
-      </class> <!-- tests.App_Desktop_Launch_Tests -->
     </classes>
   </test> <!-- Admin Tests(failed) -->
 </suite> <!-- Failed suite [CWA Windows Sample] -->

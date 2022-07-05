@@ -2,3 +2,4 @@ utilities\PropertiesFile.class
 UnitTest.class
 utilities\MyScreenRecorder.class
 backup\InstallBuild.class
+utilities\GetSetJSONData.class

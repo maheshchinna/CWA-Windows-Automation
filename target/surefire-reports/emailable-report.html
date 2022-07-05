@@ -9,133 +9,49 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">CWA Windows Sample</th></tr>
-<tr><td><a href="#t0">Admin Tests</a></td><td class="num">0</td><td class="num attn">6</td><td class="num">0</td><td class="num">0</td><td class="num">1,789,364</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Admin Tests</a></td><td class="num">0</td><td class="num attn">6</td><td class="num">0</td><td class="num">0</td><td class="num">47</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">CWA Windows Sample</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Admin Tests &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">tests.AddStore_Test</td><td><a href="#m0">setUp</a></td><td rowspan="1">1656145260984</td><td rowspan="1">1073</td></tr><tr><th colspan="4">Admin Tests &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">tests.AddStore_Test</td><td><a href="#m1">addStore</a></td><td rowspan="1">1656145262113</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td rowspan="2">tests.App_Desktop_Launch_Tests</td><td><a href="#m2">launchApp</a></td><td rowspan="1">1656145262128</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td><a href="#m3">launchDesktop</a></td><td rowspan="1">1656145262127</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td rowspan="2">tests.LogOff_Tests</td><td><a href="#m4">logoffCWAUser</a></td><td rowspan="1">1656145262127</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m5">logoffSessions</a></td><td rowspan="1">1656145262128</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td rowspan="1">tests.OnPrem_Login_Test</td><td><a href="#m6">loginTest</a></td><td rowspan="1">1656145262126</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">CWA Windows Sample</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Admin Tests &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">tests.BuildDownloadSetUp</td><td><a href="#m0">downloadCWABuild_setUp</a></td><td rowspan="1">1657025988673</td><td rowspan="1">56330</td></tr><tr><th colspan="4">Admin Tests &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">tests.AddStore_Test</td><td><a href="#m1">setUp</a></td><td rowspan="1">1657026045043</td><td rowspan="1">-1657026045043</td></tr><tr class="skippedodd"><td rowspan="1">tests.DeleteBuild</td><td><a href="#m2">deleteCWABuild</a></td><td rowspan="1">1657026045122</td><td rowspan="1">-1657026045122</td></tr><tr class="skippedeven"><td rowspan="1">tests.Install_Test</td><td><a href="#m3">installation</a></td><td rowspan="1">1657026045018</td><td rowspan="1">-1657026045018</td></tr><tr class="skippedodd"><td rowspan="1">tests.Uninstall_Test</td><td><a href="#m4">uninstallCWA</a></td><td rowspan="1">1657026045065</td><td rowspan="1">-1657026045065</td></tr><tr><th colspan="4">Admin Tests &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">tests.AddStore_Test</td><td><a href="#m5">addStore</a></td><td rowspan="1">1657026045057</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td rowspan="2">tests.App_Desktop_Launch_Tests</td><td><a href="#m6">launchApp</a></td><td rowspan="1">1657026045062</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td><a href="#m7">launchDesktop</a></td><td rowspan="1">1657026045062</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td rowspan="2">tests.LogOff_Tests</td><td><a href="#m8">logoffCWAUser</a></td><td rowspan="1">1657026045065</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m9">logoffSessions</a></td><td rowspan="1">1657026045064</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td rowspan="1">tests.OnPrem_Login_Test</td><td><a href="#m10">loginTest</a></td><td rowspan="1">1657026045061</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Admin Tests</h2><h3 id="m0">tests.AddStore_Test#setUp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: Connection refused: no further information
+<h2>Admin Tests</h2><h3 id="m0">tests.BuildDownloadSetUp#downloadCWABuild_setUp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Cannot locate an element using xpath=//button[@title=&apos;Successful&apos;]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;WIN10EN-CT5UJHL&apos;, ip: &apos;10.150.138.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
-Driver info: driver.version: WindowsDriver
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$6(AppiumCommandExecutor.java:259)
-	at java.base/java.util.Optional.orElseGet(Optional.java:364)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:258)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.windows.WindowsDriver.execute(WindowsDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:338)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:37)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:89)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:99)
-	at io.appium.java_client.windows.WindowsDriver.&lt;init&gt;(WindowsDriver.java:43)
-	at utilities.WinAppDriverSetUp.setDriverForCWA(WinAppDriverSetUp.java:24)
-	at tests.AddStore_Test.setUp(AddStore_Test.java:21)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: java.net.ConnectException: Connection refused: no further information
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:633)
-	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:129)
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:245)
-	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:165)
-	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)
-	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)
-	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
-	at okhttp3.RealCall.execute(RealCall.java:77)
-	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$1(AppiumCommandExecutor.java:162)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:105)
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:193)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:225)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:247)
-	... 43 more
-... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.AddStore_Test#addStore</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: Connection refused: no further information
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at tests.BuildDownloadSetUp.downloadCWABuild_setUp(BuildDownloadSetUp.java:45)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.AddStore_Test#setUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.DeleteBuild#deleteCWABuild</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.Install_Test#installation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">tests.Uninstall_Test#uninstallCWA</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">tests.AddStore_Test#addStore</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Cannot locate an element using xpath=//button[@title=&apos;Successful&apos;]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;WIN10EN-CT5UJHL&apos;, ip: &apos;10.150.138.64&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
-Driver info: driver.version: WindowsDriver
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$6(AppiumCommandExecutor.java:259)
-	at java.base/java.util.Optional.orElseGet(Optional.java:364)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:258)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.windows.WindowsDriver.execute(WindowsDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:338)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:37)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:89)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:99)
-	at io.appium.java_client.windows.WindowsDriver.&lt;init&gt;(WindowsDriver.java:43)
-	at utilities.WinAppDriverSetUp.setDriverForCWA(WinAppDriverSetUp.java:24)
-	at tests.AddStore_Test.setUp(AddStore_Test.java:21)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: java.net.ConnectException: Connection refused: no further information
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:633)
-	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:129)
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:245)
-	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:165)
-	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)
-	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)
-	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
-	at okhttp3.RealCall.execute(RealCall.java:77)
-	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$1(AppiumCommandExecutor.java:162)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:105)
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:193)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:225)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:247)
-	... 43 more
-... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.App_Desktop_Launch_Tests#launchApp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method App_Desktop_Launch_Tests.launchApp()[pri:1, instance:tests.App_Desktop_Launch_Tests@1f0f1111] depends on not successfully finished methods in group &quot;login_test&quot;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at tests.BuildDownloadSetUp.downloadCWABuild_setUp(BuildDownloadSetUp.java:45)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">tests.App_Desktop_Launch_Tests#launchApp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method App_Desktop_Launch_Tests.launchApp()[pri:1, instance:tests.App_Desktop_Launch_Tests@1f3f4916] depends on not successfully finished methods in group &quot;login_test&quot;
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">tests.App_Desktop_Launch_Tests#launchDesktop</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method App_Desktop_Launch_Tests.launchDesktop()[pri:0, instance:tests.App_Desktop_Launch_Tests@1f0f1111] depends on not successfully finished methods in group &quot;login_test&quot;
+<h3 id="m7">tests.App_Desktop_Launch_Tests#launchDesktop</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method App_Desktop_Launch_Tests.launchDesktop()[pri:0, instance:tests.App_Desktop_Launch_Tests@1f3f4916] depends on not successfully finished methods in group &quot;login_test&quot;
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">tests.LogOff_Tests#logoffCWAUser</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method LogOff_Tests.logoffCWAUser()[pri:0, instance:tests.LogOff_Tests@49c386c8] depends on not successfully finished methods in group &quot;login_test&quot;
+<h3 id="m8">tests.LogOff_Tests#logoffCWAUser</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method LogOff_Tests.logoffCWAUser()[pri:1, instance:tests.LogOff_Tests@794cb805] depends on not successfully finished methods in group &quot;login_test&quot;
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">tests.LogOff_Tests#logoffSessions</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method LogOff_Tests.logoffSessions()[pri:0, instance:tests.LogOff_Tests@49c386c8] depends on not successfully finished methods in group &quot;launch_test&quot;
+<h3 id="m9">tests.LogOff_Tests#logoffSessions</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method LogOff_Tests.logoffSessions()[pri:0, instance:tests.LogOff_Tests@794cb805] depends on not successfully finished methods in group &quot;launch_test&quot;
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">tests.OnPrem_Login_Test#loginTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method OnPrem_Login_Test.loginTest()[pri:0, instance:tests.OnPrem_Login_Test@670002] depends on not successfully finished methods in group &quot;add_Store&quot;
+<h3 id="m10">tests.OnPrem_Login_Test#loginTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method OnPrem_Login_Test.loginTest()[pri:0, instance:tests.OnPrem_Login_Test@1ed1993a] depends on not successfully finished methods in group &quot;add_Store&quot;
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>

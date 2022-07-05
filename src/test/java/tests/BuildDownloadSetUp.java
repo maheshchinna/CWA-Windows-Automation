@@ -1,14 +1,14 @@
 package tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.json.simple.parser.ParseException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
-import utilities.PropertiesFile;
+import utilities.GetSetJSONData;
 import utilities.WinAppDriverSetUp;
 import java.io.File;
 import java.io.IOException;
@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-public class BuildDownloadSetUp extends PropertiesFile {
+public class BuildDownloadSetUp extends GetSetJSONData {
 
     @BeforeSuite
     void downloadCWABuild_setUp() throws IOException, InterruptedException {
@@ -30,8 +30,8 @@ public class BuildDownloadSetUp extends PropertiesFile {
         driver = new ChromeDriver(options);        //driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
 
-        String branch=PropertiesFile.read_properties("branch");
-        String branch_url = PropertiesFile.read_properties("url")+"_"+branch+"_ICAClientCore";
+        String branch=getValue("branch");
+        String branch_url = getValue("url")+"_"+branch+"_ICAClientCore";
         System.out.println("Branch Info "+branch_url);
         driver.get(branch_url);
 
@@ -58,7 +58,7 @@ public class BuildDownloadSetUp extends PropertiesFile {
         String latestBuildNumber = driver.findElement(By.xpath("//div[@class='Build__number--ER']/div/a/span/span/span")).getText().split("#")[1];
         System.out.println("Build Number => "+ latestBuildNumber);
 
-        String lastRunBuild=read_properties("previouslyRunBuild");
+        String lastRunBuild=getValue("previouslyRunBuild");
 
         if(latestBuildNumber.equals(lastRunBuild)) {
             System.out.println("No new build found");
@@ -88,7 +88,7 @@ public class BuildDownloadSetUp extends PropertiesFile {
 
             System.out.println("Successfully Downloaded the build");
 
-            write_properties("previouslyRunBuild",latestBuildNumber);
+            setValue("previouslyRunBuild",latestBuildNumber);
 
         }
         driver.quit();

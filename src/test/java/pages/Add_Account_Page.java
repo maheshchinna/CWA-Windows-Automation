@@ -3,15 +3,15 @@ package pages;
 import io.appium.java_client.windows.WindowsDriver;
 import org.openqa.selenium.WebElement;
 import utilities.WaitForElement;
-import utilities.PropertiesFile;
+
 
 import java.io.IOException;
 
-public class Add_Account_Page extends PropertiesFile {
+public class Add_Account_Page  {
 
  WindowsDriver driver;
 
- public Add_Account_Page(WindowsDriver driver) throws IOException {
+ public Add_Account_Page(WindowsDriver driver) {
   this.driver = driver;
  }
 
@@ -20,10 +20,10 @@ public class Add_Account_Page extends PropertiesFile {
  private String continueLocator="Continue";
 
   //Method to type store
-  public void enterStore() throws IOException {
+  public void enterStore(String storeURL)  {
    WebElement storeEle = WaitForElement.getElementWithWaitName(driver, storeLocator);
    if (storeEle != null) {
-    storeEle.sendKeys(read_properties("storeURL"));
+    storeEle.sendKeys(storeURL);
    }
   }
 

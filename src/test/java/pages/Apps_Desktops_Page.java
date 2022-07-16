@@ -19,7 +19,7 @@ public class Apps_Desktops_Page {
     public void switchDesktopTab() throws InterruptedException {
         System.out.println("Switching to desktop tab");
         WebElement desktopTabElement = WaitForElement.getElementWithWaitId(driver, desktopTabLocator);
-        System.out.println(desktopTabElement);
+        System.out.println(desktopTabElement.getText());
         if (desktopTabElement!=null) {
             Thread.sleep(5000);
             desktopTabElement.click();

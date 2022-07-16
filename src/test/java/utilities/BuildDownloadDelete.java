@@ -1,25 +1,19 @@
-package tests;
+package utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.json.simple.parser.ParseException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.BeforeSuite;
-import utilities.GetSetJSONData;
-import utilities.WinAppDriverSetUp;
 import java.io.File;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-public class BuildDownloadSetUp extends GetSetJSONData {
+public class BuildDownloadDelete extends GetSetJSONData {
 
-    @BeforeSuite
-    void downloadCWABuild_setUp() throws IOException, InterruptedException {
+    public static void downloadCWABuild() throws InterruptedException {
         WebDriver driver;
         ChromeOptions options = new ChromeOptions();
         Map<String, Object> prefs = new HashMap<>();
@@ -55,7 +49,7 @@ public class BuildDownloadSetUp extends GetSetJSONData {
 
         // To get build number
         Thread.sleep(5000);
-        String latestBuildNumber = driver.findElement(By.xpath("//div[@class='Build__number--ER']/div/a/span/span/span")).getText().split("#")[1];
+        String latestBuildNumber = driver.findElement(By.xpath("//div[contains(@class, 'Build__number')]/div/a")).getText().split("#")[1];
         System.out.println("Build Number => "+ latestBuildNumber);
 
         String lastRunBuild=getValue("previouslyRunBuild");
@@ -66,7 +60,7 @@ public class BuildDownloadSetUp extends GetSetJSONData {
         else{
             // Use latest build
             Thread.sleep(3000);
-            driver.findElement(By.xpath("//div[@class='Build__number--ER']/div/a")).click();
+            driver.findElement(By.xpath("//div[contains(@class, 'Build__number')]/div/a")).click();
 
             String build_number_date = driver.findElement(By.xpath("//div[@class='selected']/span")).getText();
             System.out.println("Build Number and Generated date => " + build_number_date);
@@ -93,9 +87,18 @@ public class BuildDownloadSetUp extends GetSetJSONData {
         }
         driver.quit();
 
-        // Enabling Dev mode and installing Win App Driver
-        WinAppDriverSetUp.envSetUp();
     }
 
+   public static void deleteCWABuild() throws InterruptedException {
+        Thread.sleep(5000);
+        File cwa_file = new File(System.getProperty("user.dir")+"\\Builds\\CitrixWorkspaceApp.exe");
+
+        if (cwa_file.delete()) {
+            System.out.println("File deleted successfully");
+        }
+        else {
+            System.out.println("Failed to delete");
+        }
+    }
 
 }

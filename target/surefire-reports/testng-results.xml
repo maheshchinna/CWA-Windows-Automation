@@ -1,310 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="0" failed="1" skipped="5">
+<testng-results ignored="0" total="6" passed="1" failed="1" skipped="4">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-05T22:20:14 SGT" name="CWA Windows Sample" finished-at="2022-07-05T22:35:36 SGT" duration-ms="921480">
+  <suite started-at="2022-07-16T23:44:26 SGT" name="CWA Windows Sample" finished-at="2022-07-16T23:47:13 SGT" duration-ms="167017">
     <groups>
       <group name="add_Store">
-        <method signature="AddStore_Test.addStore()[pri:0, instance:tests.AddStore_Test@5ccddd20]" name="addStore" class="tests.AddStore_Test"/>
+        <method signature="AddStore_Test.addStore()[pri:0, instance:tests.AddStore_Test@2bbf180e]" name="addStore" class="tests.AddStore_Test"/>
       </group> <!-- add_Store -->
       <group name="launch_test">
-        <method signature="App_Desktop_Launch_Tests.launchApp()[pri:1, instance:tests.App_Desktop_Launch_Tests@1f3f4916]" name="launchApp" class="tests.App_Desktop_Launch_Tests"/>
-        <method signature="App_Desktop_Launch_Tests.launchDesktop()[pri:0, instance:tests.App_Desktop_Launch_Tests@1f3f4916]" name="launchDesktop" class="tests.App_Desktop_Launch_Tests"/>
+        <method signature="App_Desktop_Launch_Tests.launchApp()[pri:1, instance:tests.App_Desktop_Launch_Tests@159f197]" name="launchApp" class="tests.App_Desktop_Launch_Tests"/>
+        <method signature="App_Desktop_Launch_Tests.launchDesktop()[pri:0, instance:tests.App_Desktop_Launch_Tests@159f197]" name="launchDesktop" class="tests.App_Desktop_Launch_Tests"/>
       </group> <!-- launch_test -->
       <group name="login_test">
-        <method signature="OnPrem_Login_Test.loginTest()[pri:0, instance:tests.OnPrem_Login_Test@1ed1993a]" name="loginTest" class="tests.OnPrem_Login_Test"/>
+        <method signature="OnPrem_Login_Test.loginTest()[pri:0, instance:tests.OnPrem_Login_Test@647fd8ce]" name="loginTest" class="tests.OnPrem_Login_Test"/>
       </group> <!-- login_test -->
     </groups>
-    <test started-at="2022-07-05T22:20:14 SGT" name="Admin Tests" finished-at="2022-07-05T22:35:36 SGT" duration-ms="921480">
+    <test started-at="2022-07-16T23:44:26 SGT" name="Admin Tests" finished-at="2022-07-16T23:47:13 SGT" duration-ms="167017">
       <class name="tests.OnPrem_Login_Test">
-        <test-method signature="loginTest()[pri:0, instance:tests.OnPrem_Login_Test@1ed1993a]" started-at="2022-07-05T22:25:35 SGT" name="loginTest" depends-on-groups="add_Store" finished-at="2022-07-05T22:25:35 SGT" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method OnPrem_Login_Test.loginTest()[pri:0, instance:tests.OnPrem_Login_Test@1ed1993a] depends on not successfully finished methods in group "add_Store"]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method OnPrem_Login_Test.loginTest()[pri:0, instance:tests.OnPrem_Login_Test@1ed1993a] depends on not successfully finished methods in group "add_Store"
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
-at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginTest -->
-      </class> <!-- tests.OnPrem_Login_Test -->
-      <class name="tests.BuildDownloadSetUp">
-        <test-method is-config="true" signature="downloadCWABuild_setUp()[pri:0, instance:tests.BuildDownloadSetUp@1ffe63b9]" started-at="2022-07-05T22:18:27 SGT" name="downloadCWABuild_setUp" finished-at="2022-07-05T22:20:14 SGT" duration-ms="107562" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- downloadCWABuild_setUp -->
-      </class> <!-- tests.BuildDownloadSetUp -->
-      <class name="tests.App_Desktop_Launch_Tests">
-        <test-method signature="launchApp()[pri:1, instance:tests.App_Desktop_Launch_Tests@1f3f4916]" started-at="2022-07-05T22:25:35 SGT" name="launchApp" depends-on-groups="login_test" finished-at="2022-07-05T22:25:35 SGT" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method App_Desktop_Launch_Tests.launchApp()[pri:1, instance:tests.App_Desktop_Launch_Tests@1f3f4916] depends on not successfully finished methods in group "login_test"]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method App_Desktop_Launch_Tests.launchApp()[pri:1, instance:tests.App_Desktop_Launch_Tests@1f3f4916] depends on not successfully finished methods in group "login_test"
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
-at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApp -->
-        <test-method signature="launchDesktop()[pri:0, instance:tests.App_Desktop_Launch_Tests@1f3f4916]" started-at="2022-07-05T22:25:35 SGT" name="launchDesktop" depends-on-groups="login_test" finished-at="2022-07-05T22:25:35 SGT" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method App_Desktop_Launch_Tests.launchDesktop()[pri:0, instance:tests.App_Desktop_Launch_Tests@1f3f4916] depends on not successfully finished methods in group "login_test"]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method App_Desktop_Launch_Tests.launchDesktop()[pri:0, instance:tests.App_Desktop_Launch_Tests@1f3f4916] depends on not successfully finished methods in group "login_test"
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
-at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchDesktop -->
-      </class> <!-- tests.App_Desktop_Launch_Tests -->
-      <class name="tests.LogOff_Tests">
-        <test-method signature="logoffCWAUser()[pri:1, instance:tests.LogOff_Tests@794cb805]" started-at="2022-07-05T22:25:35 SGT" name="logoffCWAUser" depends-on-groups="login_test" finished-at="2022-07-05T22:25:35 SGT" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method LogOff_Tests.logoffCWAUser()[pri:1, instance:tests.LogOff_Tests@794cb805] depends on not successfully finished methods in group "login_test"]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method LogOff_Tests.logoffCWAUser()[pri:1, instance:tests.LogOff_Tests@794cb805] depends on not successfully finished methods in group "login_test"
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
-at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logoffCWAUser -->
-        <test-method signature="logoffSessions()[pri:0, instance:tests.LogOff_Tests@794cb805]" started-at="2022-07-05T22:25:35 SGT" name="logoffSessions" depends-on-groups="launch_test" finished-at="2022-07-05T22:25:35 SGT" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method LogOff_Tests.logoffSessions()[pri:0, instance:tests.LogOff_Tests@794cb805] depends on not successfully finished methods in group "launch_test"]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method LogOff_Tests.logoffSessions()[pri:0, instance:tests.LogOff_Tests@794cb805] depends on not successfully finished methods in group "launch_test"
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
-at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logoffSessions -->
-      </class> <!-- tests.LogOff_Tests -->
-      <class name="tests.DeleteBuild">
-        <test-method is-config="true" signature="deleteCWABuild()[pri:0, instance:tests.DeleteBuild@59d016c9]" started-at="2022-07-05T22:35:36 SGT" name="deleteCWABuild" finished-at="1970-01-01T07:30:00 SGT" duration-ms="-1657031736131" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteCWABuild -->
-      </class> <!-- tests.DeleteBuild -->
-      <class name="tests.Uninstall_Test">
-        <test-method is-config="true" signature="uninstallCWA()[pri:0, instance:tests.Uninstall_Test@4b5a5ed1]" started-at="2022-07-05T22:25:35 SGT" name="uninstallCWA" finished-at="2022-07-05T22:35:36 SGT" duration-ms="601040" status="FAIL">
+        <test-method signature="loginTest()[pri:0, instance:tests.OnPrem_Login_Test@647fd8ce]" started-at="2022-07-16T23:45:36 SGT" name="loginTest" depends-on-groups="add_Store" finished-at="2022-07-16T23:47:13 SGT" duration-ms="96944" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Uninstall failed expected [true] but found [false]]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Uninstall failed expected [true] but found [false]
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
 at org.testng.Assert.fail(Assert.java:99)
 at org.testng.Assert.failNotEquals(Assert.java:1037)
 at org.testng.Assert.assertTrue(Assert.java:45)
-at tests.Uninstall_Test.uninstallCWA(Uninstall_Test.java:21)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
-at org.testng.TestRunner.afterRun(TestRunner.java:877)
-at org.testng.TestRunner.run(TestRunner.java:599)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
-at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- uninstallCWA -->
-      </class> <!-- tests.Uninstall_Test -->
-      <class name="tests.AddStore_Test">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AddStore_Test@5ccddd20]" started-at="2022-07-05T22:25:15 SGT" name="setUp" finished-at="2022-07-05T22:25:30 SGT" duration-ms="15120" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="addStore()[pri:0, instance:tests.AddStore_Test@5ccddd20]" started-at="2022-07-05T22:25:30 SGT" name="addStore" finished-at="2022-07-05T22:25:34 SGT" duration-ms="4706" status="FAIL">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[An unknown error occurred in the remote end while processing the command. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'WIN10EN-CT5UJHL', ip: '10.150.138.64', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
-Driver info: io.appium.java_client.windows.WindowsDriver
-Capabilities {app: C:\Program Files (x86)\Citr..., javascriptEnabled: true, platform: WIN10, platformName: Windows 10}
-Session ID: B06B2815-5168-4055-B6FB-016C483AA39A]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: An unknown error occurred in the remote end while processing the command. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'WIN10EN-CT5UJHL', ip: '10.150.138.64', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
-Driver info: io.appium.java_client.windows.WindowsDriver
-Capabilities {app: C:\Program Files (x86)\Citr..., javascriptEnabled: true, platform: WIN10, platformName: Windows 10}
-Session ID: B06B2815-5168-4055-B6FB-016C483AA39A
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:247)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-at io.appium.java_client.windows.WindowsDriver.execute(WindowsDriver.java:1)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
-at pages.Add_Account_Page.enterStore(Add_Account_Page.java:26)
-at tests.AddStore_Test.addStore(AddStore_Test.java:30)
+at org.testng.Assert.assertTrue(Assert.java:55)
+at tests.OnPrem_Login_Test.loginTest(OnPrem_Login_Test.java:24)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -339,17 +63,169 @@ at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
 at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+      </class> <!-- tests.OnPrem_Login_Test -->
+      <class name="tests.LogOff_Tests">
+        <test-method signature="logoffSessions()[pri:0, instance:tests.LogOff_Tests@78aab498]" started-at="2022-07-16T23:47:13 SGT" name="logoffSessions" depends-on-groups="launch_test" finished-at="2022-07-16T23:47:13 SGT" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method LogOff_Tests.logoffSessions()[pri:0, instance:tests.LogOff_Tests@78aab498] depends on not successfully finished methods in group "launch_test"]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method LogOff_Tests.logoffSessions()[pri:0, instance:tests.LogOff_Tests@78aab498] depends on not successfully finished methods in group "launch_test"
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoffSessions -->
+        <test-method signature="logoffCWAUser()[pri:1, instance:tests.LogOff_Tests@78aab498]" started-at="2022-07-16T23:47:13 SGT" name="logoffCWAUser" depends-on-groups="login_test" finished-at="2022-07-16T23:47:13 SGT" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method LogOff_Tests.logoffCWAUser()[pri:1, instance:tests.LogOff_Tests@78aab498] depends on not successfully finished methods in group "login_test"]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method LogOff_Tests.logoffCWAUser()[pri:1, instance:tests.LogOff_Tests@78aab498] depends on not successfully finished methods in group "login_test"
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoffCWAUser -->
+      </class> <!-- tests.LogOff_Tests -->
+      <class name="tests.App_Desktop_Launch_Tests">
+        <test-method signature="launchApp()[pri:1, instance:tests.App_Desktop_Launch_Tests@159f197]" started-at="2022-07-16T23:47:13 SGT" name="launchApp" depends-on-groups="login_test" finished-at="2022-07-16T23:47:13 SGT" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method App_Desktop_Launch_Tests.launchApp()[pri:1, instance:tests.App_Desktop_Launch_Tests@159f197] depends on not successfully finished methods in group "login_test"]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method App_Desktop_Launch_Tests.launchApp()[pri:1, instance:tests.App_Desktop_Launch_Tests@159f197] depends on not successfully finished methods in group "login_test"
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="launchDesktop()[pri:0, instance:tests.App_Desktop_Launch_Tests@159f197]" started-at="2022-07-16T23:47:13 SGT" name="launchDesktop" depends-on-groups="login_test" finished-at="2022-07-16T23:47:13 SGT" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method App_Desktop_Launch_Tests.launchDesktop()[pri:0, instance:tests.App_Desktop_Launch_Tests@159f197] depends on not successfully finished methods in group "login_test"]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method App_Desktop_Launch_Tests.launchDesktop()[pri:0, instance:tests.App_Desktop_Launch_Tests@159f197] depends on not successfully finished methods in group "login_test"
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchDesktop -->
+      </class> <!-- tests.App_Desktop_Launch_Tests -->
+      <class name="tests.AddStore_Test">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AddStore_Test@2bbf180e]" started-at="2022-07-16T23:44:26 SGT" name="setUp" finished-at="2022-07-16T23:45:23 SGT" duration-ms="57002" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="addStore()[pri:0, instance:tests.AddStore_Test@2bbf180e]" started-at="2022-07-16T23:45:23 SGT" name="addStore" finished-at="2022-07-16T23:45:36 SGT" duration-ms="13003" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addStore -->
       </class> <!-- tests.AddStore_Test -->
-      <class name="tests.Install_Test">
-        <test-method is-config="true" signature="installation()[pri:0, instance:tests.Install_Test@6d2a209c]" started-at="2022-07-05T22:20:14 SGT" name="installation" finished-at="2022-07-05T22:25:15 SGT" duration-ms="300460" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- installation -->
-      </class> <!-- tests.Install_Test -->
     </test> <!-- Admin Tests -->
   </suite> <!-- CWA Windows Sample -->
 </testng-results>

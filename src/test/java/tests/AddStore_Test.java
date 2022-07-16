@@ -19,6 +19,8 @@ public class AddStore_Test extends GetSetJSONData{
 
     @BeforeClass
     void setUp() throws IOException, InterruptedException {
+
+        // Set Win App driver to CWA Win SSP Window
         WinAppDriverSetUp.openWinAppServer();
         driver = WinAppDriverSetUp.setDriverForCWA();
         System.out.println("SSP started..");
@@ -28,7 +30,7 @@ public class AddStore_Test extends GetSetJSONData{
     void addStore() throws  InterruptedException {
         Add_Account_Page add_account_page = new Add_Account_Page(driver);
         add_account_page.enterStore(getValue("storeURL"));
-        add_account_page.clickContinue();
+        //add_account_page.clickContinue();
         WebElement usernameElement = WaitForElement.getElementWithWaitId(driver, "username");
         Assert.assertTrue(usernameElement != null);
         System.out.println("Store Added successfully");

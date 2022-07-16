@@ -1,4 +1,4 @@
-package tests;
+package install_uninstall;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -6,10 +6,9 @@ import org.testng.annotations.AfterTest;
 import java.io.File;
 import java.io.IOException;
 
-public class Uninstall_Test {
+public class Uninstallation {
 
-    @AfterTest
-    void uninstallCWA() throws IOException, InterruptedException {
+    public static void uninstall_cwa() throws IOException, InterruptedException {
         String uninstallCMD = System.getProperty("user.dir")+"\\Builds\\CitrixWorkspaceApp.exe /silent /uninstall";
         Runtime.getRuntime().exec(uninstallCMD);
         int count=0;

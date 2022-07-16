@@ -20,7 +20,7 @@ public class OnPrem_Login_Test extends GetSetJSONData {
         onPrem_login_page.enterUsername(getValue("store_username"));
         onPrem_login_page.enterPassword(getValue("store_password"));
         onPrem_login_page.clickLoginBtn();
-        WebElement sspHomeElement = WaitForElement.getElementWithWaitId(driver, "myHomeBtn");
+        WebElement sspHomeElement = WaitForElement.getElementWithWaitId(driver, "desktopsBtn");
         Assert.assertTrue(sspHomeElement!=null);
         System.out.println("Login completed successfully");
     }

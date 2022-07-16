@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="CWA Windows Sample">
-    <test  name="Admin Tests">
+    <test name="Admin Tests">
         <classes>
-            <class name="tests.BuildDownloadSetUp"/>
-            <class name="tests.Install_Test"/>
+            <class name="tests.PreRequisites">
+                <methods>
+                    <include name="setUP"/>
+                </methods>
+            </class>
+            <class name="tests.Install_Uninstall_Cases">
+                <methods>
+                    <include name="install"/>
+                </methods>
+            </class>
             <class name="tests.AddStore_Test"/>
             <class name="tests.OnPrem_Login_Test"/>
             <class name="tests.App_Desktop_Launch_Tests"/>
             <class name="tests.LogOff_Tests"/>
-            <class name="tests.Uninstall_Test"/>
-            <class name="tests.DeleteBuild"/>
+            <class name="tests.Install_Uninstall_Cases">
+                <methods>
+                    <include name="uninstall"/>
+                </methods>
+            </class>
+            <class name="tests.PreRequisites">
+                <methods>
+                    <include name="testDown"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>

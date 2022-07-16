@@ -1,13 +1,10 @@
-package tests;
+package install_uninstall;
 
-import org.testng.annotations.BeforeTest;
 import java.io.IOException;
 
-public class Install_Test {
+public class Installation {
 
-    @BeforeTest
-    void installation() throws IOException, InterruptedException {
-
+   public static void installation_cwa() throws IOException, InterruptedException {
         // Installing the CWA Win build
         System.out.println("Installation started for CWA Windows...");
         String CWAInstallCMD = System.getProperty("user.dir")+"\\Builds\\CitrixWorkspaceApp.exe /includeSSON /silent";

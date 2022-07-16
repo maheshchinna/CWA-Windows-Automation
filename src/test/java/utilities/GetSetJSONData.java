@@ -23,12 +23,14 @@ public class GetSetJSONData {
         try {
             jsonSetUp();
             value=(String) jsonObject.get(property);
+            System.out.println(value);
         }catch (Exception ex){
             System.out.println(ex+" Exception occurred");
         }
         return value;
     }
 
+    // Write value to json file
     public static void setValue(String property,String value){
         FileWriter outputFile = null;
         try {

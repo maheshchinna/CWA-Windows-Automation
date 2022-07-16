@@ -1,19 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 2, Errors: 0, Skipped: 6, Time elapsed: 1,030.103 s <<< FAILURE! - in TestSuite
-addStore(tests.AddStore_Test)  Time elapsed: 4.726 s  <<< FAILURE!
-org.openqa.selenium.WebDriverException: 
-An unknown error occurred in the remote end while processing the command. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'WIN10EN-CT5UJHL', ip: '10.150.138.64', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
-Driver info: io.appium.java_client.windows.WindowsDriver
-Capabilities {app: C:\Program Files (x86)\Citr..., javascriptEnabled: true, platform: WIN10, platformName: Windows 10}
-Session ID: B06B2815-5168-4055-B6FB-016C483AA39A
-	at tests.AddStore_Test.addStore(AddStore_Test.java:30)
-
-uninstallCWA(tests.Uninstall_Test)  Time elapsed: 600.987 s  <<< FAILURE!
-java.lang.AssertionError: Uninstall failed expected [true] but found [false]
-	at tests.Uninstall_Test.uninstallCWA(Uninstall_Test.java:21)
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 4, Time elapsed: 167.846 s <<< FAILURE! - in TestSuite
+loginTest(tests.OnPrem_Login_Test)  Time elapsed: 96.944 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at tests.OnPrem_Login_Test.loginTest(OnPrem_Login_Test.java:24)
 

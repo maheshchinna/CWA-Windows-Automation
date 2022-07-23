@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -89,15 +90,23 @@ public class BuildDownloadDelete extends GetSetJSONData {
 
     }
 
-   public static void deleteCWABuild() throws InterruptedException {
-        Thread.sleep(5000);
-        File cwa_file = new File(System.getProperty("user.dir")+"\\Builds\\CitrixWorkspaceApp.exe");
+   public static void deleteCWABuild(){
 
-        if (cwa_file.delete()) {
-            System.out.println("File deleted successfully");
+        File cwa_file = new File(System.getProperty("user.dir")+"\\Builds\\CitrixWorkspaceApp.exe");
+        try{
+            cwa_file.delete();
+            if (cwa_file.exists()) {
+                Thread.sleep(10000);
+                cwa_file.delete();
+                if (cwa_file.exists())
+                    throw new IOException();
+            }
+            else {
+                System.out.println("File deleted successfully");
+            }
         }
-        else {
-            System.out.println("Failed to delete");
+        catch (Exception ex){
+            System.out.println("Failed to delete the CWA Win build");
         }
     }
 

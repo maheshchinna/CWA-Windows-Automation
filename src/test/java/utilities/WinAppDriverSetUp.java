@@ -47,5 +47,6 @@ public class WinAppDriverSetUp {
         capabilities.setCapability("ms:waitForAppLaunch", 50);
         capabilities.setCapability("deviceName", "Windows");
         return new WindowsDriver(new URL("http://127.0.0.1:4723"), capabilities);
+
     }
 }

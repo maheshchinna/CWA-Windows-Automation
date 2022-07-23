@@ -2,6 +2,7 @@ package pages;
 
 import io.appium.java_client.windows.WindowsDriver;
 import org.openqa.selenium.WebElement;
+import utilities.ScreenshotCapture;
 import utilities.WaitForElement;
 
 public class Add_Account_Page  {
@@ -26,6 +27,7 @@ public class Add_Account_Page  {
      if ((storeEle.getText().equalsIgnoreCase(storeURL))) {
       WebElement continueEle = WaitForElement.getElementWithWaitName(driver, continueLocator);
       if (continueEle != null) {
+       ScreenshotCapture.takeScreenshot(driver,"screenshots/store_enter.png");
        continueEle.click();
        break;
       }

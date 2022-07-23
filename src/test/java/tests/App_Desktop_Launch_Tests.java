@@ -4,6 +4,7 @@ import io.appium.java_client.windows.WindowsDriver;
 import org.testng.annotations.Test;
 import pages.Apps_Desktops_Page;
 import utilities.GetSetJSONData;
+import utilities.ScreenshotCapture;
 
 public class App_Desktop_Launch_Tests extends GetSetJSONData {
 
@@ -20,6 +21,7 @@ public class App_Desktop_Launch_Tests extends GetSetJSONData {
         System.out.println(getValue("desktop1")+" Desktop Launch successful");
         apps_desktops_page.launchAppDesktop(getValue("desktop2"));
         System.out.println(getValue("desktop2")+" Desktop Launch successful");
+
     }
 
     @Test(priority = 1,dependsOnGroups = "login_test",groups = "launch_test")
@@ -30,5 +32,6 @@ public class App_Desktop_Launch_Tests extends GetSetJSONData {
         System.out.println(getValue("app1")+" Desktop Launch successful");
         apps_desktops_page.launchAppDesktop(getValue("app2"));
         System.out.println(getValue("app2")+" Desktop Launch successful");
+
     }
 }

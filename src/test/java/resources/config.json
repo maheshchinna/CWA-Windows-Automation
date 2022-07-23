@@ -1,12 +1,12 @@
 {
   "previouslyRunBuild": "3850",
-  "store_username": "bvt.local\\Кгыышфтгыук",
-  "desktop2": "记事本拔 拔尝尝爸爸 SC 2K22",
+  "store_username": "bvt.local\\user99",
+  "desktop2": "EN 2016 VDA Testing with long name server VDA",
   "storeURL": "https://enddcmahesh.bvt.local/Citrix/Store",
   "desktop1": "EN 2K22 VDA master",
   "app2": "Notepad 2k16 EN",
-  "branch": "featureimporticaclientwinmaster",
-  "app1": "Google 日本尝尝爸爸 ÖäöÄö Иванов Ubuntu 1804 VDA",
-  "url": "https://ftltc03.eng.citrite.net/viewType.html?buildTypeId=RfWin",
-  "store_password": "Кгыышфтгыук"
+  "branch": "master",
+  "app1": "Google Chrome EN 2K22 VDA",
+  "url": "https://ftltc01.eng.citrite.net/viewType.html?buildTypeId=RfWin",
+  "store_password": "admin!23"
 }

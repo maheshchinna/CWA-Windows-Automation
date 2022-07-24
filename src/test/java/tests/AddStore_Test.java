@@ -7,20 +7,15 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.Add_Account_Page;
-import utilities.ScreenshotCapture;
-import utilities.WaitForElement;
-import utilities.WinAppDriverSetUp;
-import utilities.GetSetJSONData;
-import java.io.IOException;
-
+import utilities.*;
 
 public class AddStore_Test extends GetSetJSONData{
 
     public static WindowsDriver driver;
 
     @BeforeClass
-    void setUp() throws IOException, InterruptedException {
-
+    void setUp() throws Exception {
+        ScreenRecorderUtil.startRecord("add_store");
         // Set Win App driver to CWA Win SSP Window
         WinAppDriverSetUp.openWinAppServer();
         driver = WinAppDriverSetUp.setDriverForCWA();
@@ -29,7 +24,7 @@ public class AddStore_Test extends GetSetJSONData{
     }
 
     @Test(groups = "add_Store")
-    void addStore() throws InterruptedException {
+    void addStore() throws Exception {
         Add_Account_Page add_account_page = new Add_Account_Page(driver);
         add_account_page.enterStore(getValue("storeURL"));
         //add_account_page.clickContinue();
@@ -37,6 +32,7 @@ public class AddStore_Test extends GetSetJSONData{
         Assert.assertTrue(usernameElement != null);
         System.out.println("Store Added successfully");
         ScreenshotCapture.takeScreenshot(driver,"screenshots/add_account_pass.png");
+        ScreenRecorderUtil.stopRecord();
     }
 
 }

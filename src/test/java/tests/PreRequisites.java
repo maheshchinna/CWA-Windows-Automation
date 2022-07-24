@@ -3,6 +3,7 @@ package tests;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import utilities.BuildDownloadDelete;
+import utilities.ScreenRecorderUtil;
 import utilities.WinAppDriverSetUp;
 
 import java.io.IOException;
@@ -10,8 +11,8 @@ import java.io.IOException;
 public class PreRequisites {
 
     @BeforeSuite
-    void setUP() throws IOException, InterruptedException {
-
+    void setUP() throws Exception {
+        ScreenRecorderUtil.startRecord("Env setup");
         // Enabling Dev mode and installing Win App Driver
         WinAppDriverSetUp.envSetUp();
 
@@ -20,6 +21,7 @@ public class PreRequisites {
 
         // Running WinApp Driver Server
         WinAppDriverSetUp.openWinAppServer();
+        ScreenRecorderUtil.stopRecord();
     }
 
     @AfterTest

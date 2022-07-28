@@ -12,6 +12,7 @@ import utilities.WaitForElement;
 import utilities.WinAppDriverSetUp;
 import utilities.GetSetJSONData;
 import java.io.IOException;
+import utilities.LoggingUtil;
 
 
 public class AddStore_Test extends GetSetJSONData{
@@ -24,18 +25,17 @@ public class AddStore_Test extends GetSetJSONData{
         // Set Win App driver to CWA Win SSP Window
         WinAppDriverSetUp.openWinAppServer();
         driver = WinAppDriverSetUp.setDriverForCWA();
-        System.out.println("SSP started..");
+        LoggingUtil.log_info("SSP started..");
         ScreenshotCapture.takeScreenshot(driver,"screenshots/ssp_launch_pass.png");
     }
 
     @Test(groups = "add_Store")
-    void addStore() throws InterruptedException {
+    void addStore() throws InterruptedException, IOException {
         Add_Account_Page add_account_page = new Add_Account_Page(driver);
         add_account_page.enterStore(getValue("storeURL"));
-        //add_account_page.clickContinue();
         WebElement usernameElement = WaitForElement.getElementWithWaitId(driver, "username");
         Assert.assertTrue(usernameElement != null);
-        System.out.println("Store Added successfully");
+        LoggingUtil.log_info("Store Added successfully");
         ScreenshotCapture.takeScreenshot(driver,"screenshots/add_account_pass.png");
     }
 

@@ -3,6 +3,7 @@ package tests;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import utilities.BuildDownloadDelete;
+import utilities.LoggingUtil;
 import utilities.WinAppDriverSetUp;
 
 import java.io.IOException;
@@ -11,7 +12,7 @@ public class PreRequisites {
 
     @BeforeSuite
     void setUP() throws IOException, InterruptedException {
-
+        LoggingUtil.createFile();
         // Enabling Dev mode and installing Win App Driver
         WinAppDriverSetUp.envSetUp();
 
@@ -20,6 +21,8 @@ public class PreRequisites {
 
         // Running WinApp Driver Server
         WinAppDriverSetUp.openWinAppServer();
+
+
     }
 
     @AfterTest

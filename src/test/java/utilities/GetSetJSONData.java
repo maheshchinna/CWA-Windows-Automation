@@ -25,7 +25,7 @@ public class GetSetJSONData {
             value=(String) jsonObject.get(property);
             System.out.println(value);
         }catch (Exception ex){
-            System.out.println(ex+" Exception occurred");
+            LoggingUtil.log_error(ex+" Exception occurred");
         }
         return value;
     }
@@ -41,7 +41,7 @@ public class GetSetJSONData {
             outputFile.flush();
         }
         catch (Exception ex){
-            System.out.println(ex+" Exception occurred");
+            LoggingUtil.log_error(ex+" Exception occurred");
         }
     }
 

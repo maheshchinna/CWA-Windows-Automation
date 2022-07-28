@@ -8,5 +8,11 @@
   "branch": "master",
   "app1": "Google Chrome EN 2K22 VDA",
   "url": "https://ftltc01.eng.citrite.net/viewType.html?buildTypeId=RfWin",
-  "store_password": "admin!23"
+  "store_password": "admin!23",
+
+  "//Below are comments for URL_Branch info":"Configure using below URL and branch details as required",
+  "//RfWin_URL":"https://ftltc01.eng.citrite.net/viewType.html?buildTypeId=RfWin",
+  "//HDX_URL":"https://ftltc03.eng.citrite.net/viewType.html?buildTypeId=RfWin",
+  "//RfWin_branch": "master/release2207",
+  "//HDX_branch": "featureimporticaclientwinmaster/featureimporticaclientwinrelease"
 }

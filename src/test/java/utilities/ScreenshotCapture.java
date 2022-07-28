@@ -16,7 +16,7 @@ public class ScreenshotCapture {
         }
         catch (IOException ex){
             ex.printStackTrace();
-            System.out.println("Screen capture issue due to IOException");
+            LoggingUtil.log_error("Screen capture issue due to IOException");
         }
 
     }

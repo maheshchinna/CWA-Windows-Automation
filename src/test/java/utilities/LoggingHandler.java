@@ -1,9 +1,6 @@
 package utilities;
 
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 import org.testng.log.TextFormatter;
-
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -11,7 +8,7 @@ import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
-public class LoggingUtil {
+public class LoggingHandler {
 
     static Logger logger;
     static FileHandler handler;
@@ -19,13 +16,12 @@ public class LoggingUtil {
     public static void createFile() {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-YYYY HH.mm");
         try {
-            handler = new FileHandler("logs/automation_run_on" + dateFormat.format(new Date()) + ".log", true);
+            handler = new FileHandler("logs/automation_executed_on_" + dateFormat.format(new Date()) + ".log", true);
             log_handler();
         }
         catch (IOException exp){
             exp.printStackTrace();
         }
-
     }
 
     private static void log_handler()  {
@@ -39,11 +35,6 @@ public class LoggingUtil {
         logger.info("INFO  :"+infoMsg);
 
     }
-
-    public static void log_warning(String warnMsg) {
-        logger.fine("WARN  :"+warnMsg);
-    }
-
     public static void log_error(String warnMsg) {
         logger.warning("ERROR :"+warnMsg);
     }

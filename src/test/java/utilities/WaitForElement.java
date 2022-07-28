@@ -16,16 +16,16 @@ public class WaitForElement {
                 boolean visibility=element.isDisplayed();
                 //System.out.println(visibility);
                 if(visibility){
-                    LoggingUtil.log_info(locator + " element found");
+                    LoggingHandler.log_info(locator + " element found");
                     return element;
                 }
             }
             catch(Exception e){
-                LoggingUtil.log_warning(locator + " element not found, retrying");
+                LoggingHandler.log_info(locator + " element not found, retrying");
             }
             Thread.sleep(2000);
         }
-        LoggingUtil.log_error(locator + " element not found");
+        LoggingHandler.log_error(locator + " element not found");
         return null;
     }
 
@@ -35,11 +35,11 @@ public class WaitForElement {
             driverWait.until(
                     ExpectedConditions.visibilityOfElementLocated(By.name(locator))
             );
-            LoggingUtil.log_info(locator + " element found");
+            LoggingHandler.log_info(locator + " element found");
             return driver.findElementByName(locator);
         }
         catch (Exception exp){
-            LoggingUtil.log_error(locator +" element not found");
+            LoggingHandler.log_error(locator +" element not found");
         }
         return null;
     }

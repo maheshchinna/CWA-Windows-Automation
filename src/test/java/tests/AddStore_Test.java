@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.Add_Account_Page;
 import utilities.*;
-public class AddStore_Test extends GetSetJSONData{
+public class AddStore_Test extends JSON_Handler {
 
     public static WindowsDriver driver;
 
@@ -17,7 +17,7 @@ public class AddStore_Test extends GetSetJSONData{
         // Set Win App driver to CWA Win SSP Window
         WinAppDriverSetUp.openWinAppServer();
         driver = WinAppDriverSetUp.setDriverForCWA();
-        LoggingUtil.log_info("SSP started..");
+        LoggingHandler.log_info("SSP started..");
         ScreenshotCapture.takeScreenshot(driver,"screenshots/ssp_launch_pass.png");
     }
 
@@ -27,7 +27,7 @@ public class AddStore_Test extends GetSetJSONData{
         add_account_page.enterStore(getValue("storeURL"));
         WebElement usernameElement = WaitForElement.getElementWithWaitId(driver, "username");
         Assert.assertTrue(usernameElement != null);
-        LoggingUtil.log_info("Store Added successfully");
+        LoggingHandler.log_info("Store Added successfully");
         ScreenshotCapture.takeScreenshot(driver,"screenshots/add_account_pass.png");
         ScreenRecorderUtil.stopRecord();
     }

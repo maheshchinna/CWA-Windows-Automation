@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-public class BuildDownloadDelete extends GetSetJSONData {
+public class BuildDownloadDelete extends JSON_Handler {
 
     public static void downloadCWABuild() throws InterruptedException, IOException {
         WebDriver driver;
@@ -27,13 +27,13 @@ public class BuildDownloadDelete extends GetSetJSONData {
 
         String branch=getValue("branch");
         String branch_url = getValue("url")+"_"+branch+"_ICAClientCore";
-        LoggingUtil.log_info("Branch Info "+branch_url);
+        LoggingHandler.log_info("Branch Info "+branch_url);
         driver.get(branch_url);
 
         driver.findElement(By.linkText("Log in as guest")).click();
         String title= driver.getTitle();
         // assert branch in loaded_page_title
-        LoggingUtil.log_info("Branch => "+ title);
+        LoggingHandler.log_info("Branch => "+ title);
 
         // Switch to Successful Builds tab
 
@@ -51,12 +51,12 @@ public class BuildDownloadDelete extends GetSetJSONData {
         // To get build number
         Thread.sleep(5000);
         String latestBuildNumber = driver.findElement(By.xpath("//div[contains(@class, 'Build__number')]/div/a")).getText().split("#")[1];
-        LoggingUtil.log_info("Build Number => "+ latestBuildNumber);
+        LoggingHandler.log_info("Build Number => "+ latestBuildNumber);
 
         String lastRunBuild=getValue("previouslyRunBuild");
 
         if(latestBuildNumber.equals(lastRunBuild)) {
-            LoggingUtil.log_info("No new build found");
+            LoggingHandler.log_info("No new build found");
         }
         else{
             // Use latest build
@@ -64,7 +64,7 @@ public class BuildDownloadDelete extends GetSetJSONData {
             driver.findElement(By.xpath("//div[contains(@class, 'Build__number')]/div/a")).click();
 
             String build_number_date = driver.findElement(By.xpath("//div[@class='selected']/span")).getText();
-            LoggingUtil.log_info("Build Number and Generated date => " + build_number_date);
+            LoggingHandler.log_info("Build Number and Generated date => " + build_number_date);
 
             driver.findElement(By.linkText("Artifactory-Artifacts")).click();
 
@@ -78,10 +78,10 @@ public class BuildDownloadDelete extends GetSetJSONData {
 
             do {
                 Thread.sleep(25000);
-                LoggingUtil.log_info("Downloading the build....");
+                LoggingHandler.log_info("Downloading the build....");
             }while(!(new File(System.getProperty("user.dir")+"\\Builds\\CitrixWorkspaceApp.exe").exists()));
 
-            LoggingUtil.log_info("Successfully Downloaded the build");
+            LoggingHandler.log_info("Successfully Downloaded the build");
 
             //setValue("previouslyRunBuild",latestBuildNumber);
 
@@ -102,11 +102,11 @@ public class BuildDownloadDelete extends GetSetJSONData {
                     throw new IOException();
             }
             else {
-                LoggingUtil.log_info("File deleted successfully");
+                LoggingHandler.log_info("File deleted successfully");
             }
         }
         catch (Exception ex){
-            LoggingUtil.log_error("Failed to delete the CWA Win build");
+            LoggingHandler.log_error("Failed to delete the CWA Win build");
         }
     }
 

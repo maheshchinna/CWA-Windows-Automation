@@ -3,15 +3,10 @@ package tests;
 import io.appium.java_client.windows.WindowsDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-<<<<<<< HEAD
+import utilities.LoggingHandler;
 import utilities.ScreenRecorderUtil;
-=======
-import utilities.LoggingUtil;
->>>>>>> feature-change
 import utilities.ScreenshotCapture;
 import utilities.WaitForElement;
-
-import java.io.IOException;
 
 public class LogOff_Tests {
     public static WindowsDriver driver;
@@ -22,7 +17,7 @@ public class LogOff_Tests {
         this.driver=AddStore_Test.driver;
         String allSessionLogoff = "C:\\Program Files (x86)\\Citrix\\ICA Client\\SelfServicePlugin\\SelfService.exe -logoffSessions";
         Runtime.getRuntime().exec(allSessionLogoff);
-        LoggingUtil.log_info("All sessions are logged-off");
+        LoggingHandler.log_info("All sessions are logged-off");
         Thread.sleep(5000);
     }
 
@@ -30,7 +25,7 @@ public class LogOff_Tests {
     void logoffCWAUser() throws Exception {
         String CWAUserLogoff = "C:\\Program Files (x86)\\Citrix\\ICA Client\\SelfServicePlugin\\SelfService.exe -logoff";
         Runtime.getRuntime().exec(CWAUserLogoff);
-        LoggingUtil.log_info("CWA user logged-off");
+        LoggingHandler.log_info("CWA user logged-off");
         WebElement sspHomeElement = WaitForElement.getElementWithWaitId(driver, "myHomeBtn");
         sspHomeElement.click();
         Thread.sleep(2000);

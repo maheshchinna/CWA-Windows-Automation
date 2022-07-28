@@ -16,20 +16,20 @@ public class WinAppDriverSetUp {
         final String[] enableDevMode = {"regedit", "/s", System.getProperty("user.dir") + "\\Dependencies\\devModeOn.reg"};
         Runtime.getRuntime().exec(enableDevMode);
         Thread.sleep(1000);
-        LoggingUtil.log_info("Dev Mode enabled");
+        LoggingHandler.log_info("Dev Mode enabled");
 
         boolean winAppDriverInstallCheck = new File("C:\\Program Files\\Windows Application Driver\\WinAppDriver.exe").exists();
         if (!winAppDriverInstallCheck) {
-            LoggingUtil.log_info("Installation started for Win App Driver...");
+            LoggingHandler.log_info("Installation started for Win App Driver...");
             final String installWinAppDriver = System.getProperty("user.dir") + "\\Dependencies\\WindowsApplicationDriver-1.2.99-win-x64.exe /silent";
             Runtime.getRuntime().exec(installWinAppDriver);
             do {
                 Thread.sleep(5000);
-                LoggingUtil.log_info("Installing Win App Driver...");
+                LoggingHandler.log_info("Installing Win App Driver...");
             } while (!(new File("C:\\Program Files\\Windows Application Driver\\WinAppDriver.exe").exists()));
-            LoggingUtil.log_info("Win App Driver installed");
+            LoggingHandler.log_info("Win App Driver installed");
         } else
-            LoggingUtil.log_info("Win App Driver already installed");
+            LoggingHandler.log_info("Win App Driver already installed");
     }
 
     public static void openWinAppServer() throws IOException, InterruptedException {
@@ -37,7 +37,7 @@ public class WinAppDriverSetUp {
         String WinAppDrv = "C:\\Program Files\\Windows Application Driver\\WinAppDriver.exe";
         desktop.open(new File(WinAppDrv));
         Thread.sleep(5000);
-        LoggingUtil.log_info("Win App Driver server started..");
+        LoggingHandler.log_info("Win App Driver server started..");
     }
 
     public static WindowsDriver setDriverForCWA() throws MalformedURLException {

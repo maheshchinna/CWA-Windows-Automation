@@ -1,21 +1,13 @@
 package tests;
 
 import io.appium.java_client.windows.WindowsDriver;
-import org.json.simple.parser.ParseException;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.OnPrem_Login_Page;
-<<<<<<< HEAD
-import utilities.ScreenRecorderUtil;
-=======
-import utilities.LoggingUtil;
->>>>>>> feature-change
-import utilities.ScreenshotCapture;
-import utilities.WaitForElement;
-import utilities.GetSetJSONData;
+import utilities.*;
 
-public class OnPrem_Login_Test extends GetSetJSONData {
+public class OnPrem_Login_Test extends JSON_Handler {
 
     WindowsDriver driver;
 
@@ -30,7 +22,7 @@ public class OnPrem_Login_Test extends GetSetJSONData {
         onPrem_login_page.clickLoginBtn();
         WebElement desktopsBtnElement = WaitForElement.getElementWithWaitId(driver, "desktopsBtn");
         Assert.assertTrue(desktopsBtnElement!=null);
-        LoggingUtil.log_info("Login completed successfully");
+        LoggingHandler.log_info("Login completed successfully");
         ScreenshotCapture.takeScreenshot(driver,"screenshots/cwa_user_login_pass.png");
         ScreenRecorderUtil.stopRecord();
     }

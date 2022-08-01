@@ -4,6 +4,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import utilities.*;
 
+import java.io.IOException;
+
 public class PreRequisites {
 
     @BeforeSuite
@@ -34,9 +36,20 @@ public class PreRequisites {
     }
 
     @AfterTest
-    void testDown() throws InterruptedException {
+    void testDown() {
+
         // Delete downloaded CWA Win build
         BuildDownloadDelete.deleteCWABuild();
+
+        //Close the Win App Driver Server connection
+        try {
+            Runtime.getRuntime().exec("taskkill /im WinAppDriver.exe /f");
+        }
+        catch (IOException exp){
+            LoggingHandler.log_info("Exception to close the Win App Driver");
+        }
+        LoggingHandler.log_info("Win App Driver Server connection closed");
+        LoggingHandler.log_info("Completed the execution!!!!!!");
     }
 
 }

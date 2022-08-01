@@ -106,7 +106,6 @@ public class BuildDownloadDelete extends JSON_Read_Write {
             }
             else {
                 LoggingHandler.log_info("File deleted successfully");
-                LoggingHandler.log_info("Completed the execution!!!!!!");
             }
         }
         catch (Exception ex) {

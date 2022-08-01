@@ -27,7 +27,7 @@ public class Apps_Desktops_Page {
             desktopTabElement.click();
             LoggingHandler.log_info("Switched to desktop tab");
             Thread.sleep(2000);
-            ScreenshotCapture.takeScreenshot(driver,"screenshots/desktop_tab_switch_pass.png");
+            ScreenshotCapture.takeScreenshot(driver,"desktop_tab_switch_pass.png");
         }
     }
 
@@ -40,7 +40,7 @@ public class Apps_Desktops_Page {
             appsTabElement.click();
             LoggingHandler.log_info("Switched to app tab");
             Thread.sleep(2000);
-            ScreenshotCapture.takeScreenshot(driver,"screenshots/app_tab_switch_pass.png");
+            ScreenshotCapture.takeScreenshot(driver,"app_tab_switch_pass.png");
         }
     }
 

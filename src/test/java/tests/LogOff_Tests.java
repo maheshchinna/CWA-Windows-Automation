@@ -8,6 +8,8 @@ import utilities.ScreenRecorderUtil;
 import utilities.ScreenshotCapture;
 import utilities.WaitForElement;
 
+import java.io.IOException;
+
 public class LogOff_Tests {
     public static WindowsDriver driver;
 
@@ -22,14 +24,14 @@ public class LogOff_Tests {
     }
 
     @Test(priority = 1,dependsOnGroups = "login_test")
-    void logoffCWAUser() throws Exception {
+    void logoffCWAUser() throws IOException, InterruptedException {
         String CWAUserLogoff = "C:\\Program Files (x86)\\Citrix\\ICA Client\\SelfServicePlugin\\SelfService.exe -logoff";
         Runtime.getRuntime().exec(CWAUserLogoff);
         LoggingHandler.log_info("CWA user logged-off");
         WebElement sspHomeElement = WaitForElement.getElementWithWaitId(driver, "myHomeBtn");
         sspHomeElement.click();
         Thread.sleep(2000);
-        ScreenshotCapture.takeScreenshot(driver,"screenshots/cwa_user_logoff_pass.png");
+        ScreenshotCapture.takeScreenshot(driver,"cwa_user_logoff_pass.png");
         ScreenRecorderUtil.stopRecord();
     }
 }

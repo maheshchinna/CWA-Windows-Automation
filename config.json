@@ -1,0 +1,17 @@
+{
+  "branch": "master",
+  "url": "https://ftltc01.eng.citrite.net/viewType.html?buildTypeId=RfWin",
+  "store_username": "bvt.local\\user99",
+  "desktop2": "EN 2016 VDA Testing with long name server VDA",
+  "storeURL": "https://enddcmahesh.bvt.local/Citrix/Store",
+  "desktop1": "EN 2K22 VDA master",
+  "app2": "Notepad 2k16 EN",
+  "app1": "Google Chrome EN 2K22 VDA",
+  "store_password": "admin!23",
+
+  "\\Below are comments for URL_Branch info": "Configure using below URL and branch details as required",
+  "\\RfWin_URL": "https://ftltc01.eng.citrite.net/viewType.html?buildTypeId=RfWin",
+  "\\HDX_URL": "https://ftltc03.eng.citrite.net/viewType.html?buildTypeId=RfWin",
+  "\\RfWin_branch": "master or release2207",
+  "\\HDX_branch": "featureimporticaclientwinmaster or featureimporticaclientwinrelease"
+}

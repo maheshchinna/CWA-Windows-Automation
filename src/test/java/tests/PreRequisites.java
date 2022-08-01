@@ -9,8 +9,18 @@ public class PreRequisites {
     @BeforeSuite
 
     void setUP() throws Exception {
-        ScreenRecorderUtil.startRecord("Env setup");
+
+        // Create screen recording folder unique for every run
+        ScreenRecorderUtil.createRecordingFolder();
+
+        // Create screenshot folder unique for every run
+        ScreenshotCapture.createScreenshotFolder();
+
+        // Create unique logging file every run
         LoggingHandler.createFile();
+
+        ScreenRecorderUtil.startRecord("Env setup");
+
         // Enabling Dev mode and installing Win App Driver
         WinAppDriverSetUp.envSetUp();
 
@@ -18,14 +28,13 @@ public class PreRequisites {
         BuildDownloadDelete.downloadCWABuild();
 
         // Running WinApp Driver Server
-       // WinAppDriverSetUp.openWinAppServer();
+        WinAppDriverSetUp.openWinAppServer();
 
         ScreenRecorderUtil.stopRecord();
     }
 
     @AfterTest
     void testDown() throws InterruptedException {
-
         // Delete downloaded CWA Win build
         BuildDownloadDelete.deleteCWABuild();
     }

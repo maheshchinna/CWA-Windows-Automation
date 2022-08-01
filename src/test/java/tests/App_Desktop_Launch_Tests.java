@@ -3,12 +3,12 @@ package tests;
 import io.appium.java_client.windows.WindowsDriver;
 import org.testng.annotations.Test;
 import pages.Apps_Desktops_Page;
-import utilities.JSON_Handler;
+import utilities.JSON_Read_Write;
 import utilities.ScreenRecorderUtil;
 import utilities.LoggingHandler;
 
 
-public class App_Desktop_Launch_Tests extends JSON_Handler {
+public class App_Desktop_Launch_Tests extends JSON_Read_Write {
 
     WindowsDriver driver;
     Apps_Desktops_Page apps_desktops_page;
@@ -20,10 +20,10 @@ public class App_Desktop_Launch_Tests extends JSON_Handler {
         apps_desktops_page =new Apps_Desktops_Page(driver);
         apps_desktops_page.switchDesktopTab();
         LoggingHandler.log_info("Launching desktop session...");
-        apps_desktops_page.launchAppDesktop(getValue("desktop1"));
-        LoggingHandler.log_info(getValue("desktop1")+" Desktop Launch successful");
-        apps_desktops_page.launchAppDesktop(getValue("desktop2"));
-        LoggingHandler.log_info(getValue("desktop2")+" Desktop Launch successful");
+        apps_desktops_page.launchAppDesktop(getConfigValue("desktop1"));
+        LoggingHandler.log_info(getConfigValue("desktop1")+" Desktop Launch successful");
+        apps_desktops_page.launchAppDesktop(getConfigValue("desktop2"));
+        LoggingHandler.log_info(getConfigValue("desktop2")+" Desktop Launch successful");
 
     }
 
@@ -31,11 +31,11 @@ public class App_Desktop_Launch_Tests extends JSON_Handler {
     void launchApp() throws Exception {
         apps_desktops_page.switchAppTab();
         LoggingHandler.log_info("Launching app session...");
-        apps_desktops_page.launchAppDesktop(getValue("app1"));
-        LoggingHandler.log_info(getValue("app1")+" Desktop Launch successful");
-        apps_desktops_page.launchAppDesktop(getValue("app2"));
-        System.out.println(getValue("app2")+" Desktop Launch successful");
+        apps_desktops_page.launchAppDesktop(getConfigValue("app1"));
+        LoggingHandler.log_info(getConfigValue("app1")+" Desktop Launch successful");
+        apps_desktops_page.launchAppDesktop(getConfigValue("app2"));
+        System.out.println(getConfigValue("app2")+" Desktop Launch successful");
         ScreenRecorderUtil.stopRecord();
-        LoggingHandler.log_info(getValue("app2")+" Desktop Launch successful");
+        LoggingHandler.log_info(getConfigValue("app2")+" Desktop Launch successful");
     }
 }

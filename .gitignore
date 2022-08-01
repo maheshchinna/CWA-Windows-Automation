@@ -1,0 +1,6 @@
+/target/*
+/logs/automation_executed_on_*
+/recordings/recorded_on_*
+/screenshots/screenshot_at_*
+
+

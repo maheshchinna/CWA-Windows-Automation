@@ -6,37 +6,38 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-public class BuildDownloadDelete extends JSON_Handler {
+public class BuildDownloadDelete extends JSON_Read_Write {
 
-    public static void downloadCWABuild() throws InterruptedException, IOException {
+    public static void downloadCWABuild() throws InterruptedException {
         WebDriver driver;
         ChromeOptions options = new ChromeOptions();
         Map<String, Object> prefs = new HashMap<>();
-        prefs.put("download.default_directory", System.getProperty("user.dir")+"\\Builds");
-        prefs.put("safebrowsing.enabled",true);
+        prefs.put("download.default_directory", System.getProperty("user.dir") + "\\Builds");
+        prefs.put("safebrowsing.enabled", true);
         options.setExperimentalOption("prefs", prefs);
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);        //driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
 
-        String branch=getValue("branch");
-        String branch_url = getValue("url")+"_"+branch+"_ICAClientCore";
-        LoggingHandler.log_info("Branch Info "+branch_url);
+        String branch = getConfigValue("branch");
+        setRunValue("previouslyRunBranch", branch);
+        String branch_url = getConfigValue("url") + "_" + branch + "_ICAClientCore";
+        LoggingHandler.log_info("Branch Info " + branch_url);
         driver.get(branch_url);
 
         driver.findElement(By.linkText("Log in as guest")).click();
-        String title= driver.getTitle();
-        // assert branch in loaded_page_title
-        LoggingHandler.log_info("Branch => "+ title);
+
+        // log branch info
+        LoggingHandler.log_info("Branch => " + driver.getTitle());
 
         // Switch to Successful Builds tab
-
         driver.findElement(By.xpath("//button[@title='Successful']")).click();
 
         /* Customized build number
@@ -51,14 +52,14 @@ public class BuildDownloadDelete extends JSON_Handler {
         // To get build number
         Thread.sleep(5000);
         String latestBuildNumber = driver.findElement(By.xpath("//div[contains(@class, 'Build__number')]/div/a")).getText().split("#")[1];
-        LoggingHandler.log_info("Build Number => "+ latestBuildNumber);
+        LoggingHandler.log_info("Build Number => " + latestBuildNumber);
 
-        String lastRunBuild=getValue("previouslyRunBuild");
+        String lastRunBuild = getRunValue("previouslyRunBuild");
 
-        if(latestBuildNumber.equals(lastRunBuild)) {
+        // New Build availability
+        if (latestBuildNumber.equals(lastRunBuild)) {
             LoggingHandler.log_info("No new build found");
-        }
-        else{
+        } else {
             // Use latest build
             Thread.sleep(3000);
             driver.findElement(By.xpath("//div[contains(@class, 'Build__number')]/div/a")).click();
@@ -79,33 +80,36 @@ public class BuildDownloadDelete extends JSON_Handler {
             do {
                 Thread.sleep(25000);
                 LoggingHandler.log_info("Downloading the build....");
-            }while(!(new File(System.getProperty("user.dir")+"\\Builds\\CitrixWorkspaceApp.exe").exists()));
+            } while (!(new File(System.getProperty("user.dir") + "\\Builds\\CitrixWorkspaceApp.exe").exists()));
 
             LoggingHandler.log_info("Successfully Downloaded the build");
 
-            //setValue("previouslyRunBuild",latestBuildNumber);
+            //Write the build info to previously run json file
+            setRunValue("previouslyRunBuild", latestBuildNumber);
 
         }
         driver.quit();
 
     }
 
-   public static void deleteCWABuild(){
+    public static void deleteCWABuild() {
 
-        File cwa_file = new File(System.getProperty("user.dir")+"\\Builds\\CitrixWorkspaceApp.exe");
-        try{
+        File cwa_file = new File(System.getProperty("user.dir") + "\\Builds\\CitrixWorkspaceApp.exe");
+        try {
             cwa_file.delete();
+            Thread.sleep(2000);
             if (cwa_file.exists()) {
                 Thread.sleep(10000);
                 cwa_file.delete();
                 if (cwa_file.exists())
-                    throw new IOException();
+                    throw new InterruptedException();
             }
             else {
                 LoggingHandler.log_info("File deleted successfully");
+                LoggingHandler.log_info("Completed the execution!!!!!!");
             }
         }
-        catch (Exception ex){
+        catch (Exception ex) {
             LoggingHandler.log_error("Failed to delete the CWA Win build");
         }
     }
